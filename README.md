@@ -1,7 +1,7 @@
 # formelsamling
 Formelsamling i energiteknik
 
-This is an energy enegineering formula collection made in Latex. The purpose of the 
+This is an energy enegineering formula collection written in Latex. The purpose of the 
 collection is to use the formulas in energy engineering undergraduate courses.
 
 The formula collection is written in Swedish.
