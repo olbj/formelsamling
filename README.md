@@ -1,6 +1,11 @@
 # formelsamling
 Formelsamling i energiteknik
 
+This is an energy enegineering formula collection made in Latex. The purpose of the 
+collection is to use the formulas in energy engineering undergraduate courses.
+
+The formula collection is written in Swedish.
+
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 This work is licensed under a
