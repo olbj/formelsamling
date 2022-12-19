@@ -36,36 +36,27 @@
  där $T_i$ och $T_u$ är temperaturena i väggens varma respektive kalla omgivning, långt från väggen. \par
 \section*{Konvektion}
 \textbf{Dimensionslösa tal} 
-	\begin{gather*}
-	\textit{Reynolds tal: } \\
-	  Re   = \dfrac{v_m \cdot d_h}{\nu} =  \\ 
-    \text{~~~}= \left| \mu = \dfrac{\nu}{\varrho}	\right| =\dfrac{v_m \cdot d_h \cdot \varrho}{\mu}  \\
-	   d_h \text{ (hydraliska diametern )} = \dfrac{4 \cdot \textit{tvärsnittsarean}}{\textit{våt omkrets}} = \dfrac{4 \cdot A}{O} \\
-	    v_m \text{ (medelhastigheten )} = \dfrac{\dot{m}}{\varrho \cdot A}
-	\end{gather*}
-\textit{Prandtls tal}
-	\begin{equation*}
-    Pr = \dfrac{c_p \cdot \mu}{\lambda} = \dfrac{c_p \cdot \nu \cdot \varrho}{\lambda} = \dfrac{\nu}{\alpha}
-	\end{equation*}
-\textit{Nusselts tal}
-	\begin{equation*}
-	Nu = \dfrac{\alpha \cdot d_h}{\lambda} 
-	\end{equation*}
+	\begin{flalign*}
+	& \textit{Reynolds tal: } Re  = \dfrac{v_m \cdot d_h}{\nu} = &   \\ 
+	& = \left| \mu = \dfrac{\nu}{\varrho}	\right| =\dfrac{v_m \cdot d_h \cdot \varrho}{\mu}   \\
+	& d_h \text{ (hydraliska diametern )} = \dfrac{4 \cdot \textit{tvärsnittsarean}}{\textit{våt omkrets}} = \dfrac{4 \cdot A}{O} \\
+	& v_m \text{ (medelhastigheten )} = \dfrac{\dot{m}}{\varrho \cdot A} \\
+	& \textit{Prandtls tal: } Pr = \dfrac{c_p \cdot \mu}{\lambda} = \dfrac{c_p \cdot \nu \cdot \varrho}{\lambda} = \dfrac{\nu}{\alpha} \\
+	& \textit{Nusselts tal: } Nu = \dfrac{\alpha \cdot d_h}{\lambda}
+	\end{flalign*}
 	Korrelationer för \acrfull{Nu} finns till exempel i  \cite{soleimani_mohseni_formelsamling_2018} och \cite{alvarez_energiteknik_2006}
   \subsection*{Samband mellan tryckfall och värmeöverföringskoefficient för cirkuära rör}
 \subsubsection*{Konstanta röregenskaper, variabelt volymflöde}
-\begin{tabularx}{\linewidth} { l l}
+\begin{tabularx}{\linewidth} { l l l}
 	% >{\raggedright\arraybackslash\hsize=1.9\hsize\linewidth=\hsize}X
 	% >{\raggedright\arraybackslash\hsize=0.1\hsize\linewidth=\hsize}X}
-  \textit{Laminärt flöde} & \textit{Turbulent flöde} \\ 
-  $P_f \text{ } \propto \text{ } v \text{ } \propto \text{ } \dot{V}$ & $p_f \text{ } \propto \text{ } v^{1,75 \text{ till } 2}$\\
-  $\alpha \text{ } \propto \text{ } v^{0 \text{ till } 0,3}$ & $\alpha \text{ } \propto \text{ } v^{0,8}$\\
+	\textit{Laminärt flöde} & ~~~~~  & \textit{Turbulent flöde} \\ 
+  $P_f \text{ } \propto \text{ } v \text{ } \propto \text{ } \dot{V}$ &&  $p_f \text{ } \propto \text{ } v^{1,75 \text{ till } 2}$\\
+  $\alpha \text{ } \propto \text{ } v^{0 \text{ till } 0,3}$ &&  $\alpha \text{ } \propto \text{ } v^{0,8}$\\
 	\end{tabularx}
 \subsubsection*{Konstant volymflöde, variabel rördiameter}
-\begin{tabularx}{\linewidth} { l l}
-	% >{\raggedright\arraybackslash\hsize=1.9\hsize\linewidth=\hsize}X
-	% >{\raggedright\arraybackslash\hsize=0.1\hsize\linewidth=\hsize}X}
-  \textit{Laminärt flöde} & \textit{Turbulent flöde} \\ 
-  $p_f \text{ } \propto \text{ } d^{-4}$ & $p_f \text{ } \propto \text{ } d^{-(4,75 \text{ till } 5)}$\\
-  $\alpha \text{ } \propto \text{ } d^{-1}$ & $\alpha \text{ } \propto \text{ } d^{-1,8}$\\
+\begin{tabularx}{\linewidth} {l l l} 
+	\textit{Laminärt flöde} & ~~~~~  & \textit{Turbulent flöde} \\ 
+	$p_f \text{ } \propto \text{ } d^{-4}$ && $p_f \text{ } \propto \text{ } d^{-(4,75 \text{ till } 5)}$\\
+	$\alpha \text{ } \propto \text{ } d^{-1}$ && $\alpha \text{ } \propto \text{ } d^{-1,8}$\\
 	\end{tabularx}
