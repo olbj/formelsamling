@@ -1,0 +1,73 @@
+\chapter{Värmelära}
+\section*{Beteckningar}
+\acrfull{Ru}\\
+\acrfull{mol}\\
+\acrfull{S}\\
+\acrfull{X}\\
+\acrfull{G}\\
+\acrfull{cp}\\
+\acrfull{cv}\\
+\acrfull{q}\\
+\acrfull{m}\\
+\acrfull{s}\\
+\acrfull{R}\\
+\acrfull{c1}\\
+\acrfull{T}\\
+\acrfull{p}\\
+\acrfull{eta}\\
+\acrfull{V}\\
+\acrfull{Q}
+
+\section*{Grundläggande formler och definitioner}
+	\textbf{Allmänna gaslagen: } $ p\cdot V = m \cdot R \cdot T $ , eller  $ p\cdot V = n \cdot R_u \cdot T $\\
+	där $ R_u = \text{Almänna gaskonstanten och } n= \text{antal mol} $ \par
+	\textbf{Värme vid konstant tryck: } \\
+  $ dQ = m\cdot c_p\cdot dt$. $ Q \approx m \cdot \overline {c_p} \cdot \Delta t \text { då } c_p \text{ varierar lite.}$ \par
+	\textbf{Värme vid konstant volymitet: } \\
+  $ dQ = m\cdot c_v\cdot dt$. $ Q \approx m \cdot \overline {c_v} \cdot \Delta t \text { då } c_v \text{ varierar lite.}$ 
+	\begin{flalign*}
+    &\textbf{Samband mellan c\textsubscript{p}, c\textsubscript{v} och R för ideala gaser:}&\\
+    &c_p - c_v = R \text{ samt } \dfrac{c_p}{c_v} = \kappa.&
+	\end{flalign*}
+	\textbf{Volymändringsarbete: } $; dW = F \cdot ds = p \cdot A \cdot ds = p \cdot dV $ \par \par
+	\textbf{Tekniskt arbete: } $ dW_t = - p  \cdot dV \text{; }  dw_t = - p  \cdot dv $\\		 
+	Miunustecknet definierat att avgivet arbete vid expansion är \textgreater 0 
+	\begin{flalign*}
+    & \textbf{Entalpi: }h = u + p \cdot v &\\
+    & dq = dh - v \cdot dp &
+	\end{flalign*}
+	\textbf{Entropi: } $ds = \left (\dfrac{dq}{dT}\right)_{rev}$ 
+	\begin{flalign*}
+   & \textbf{Gibbs fria energi: } G = H - T \cdot S \\
+	 & \Delta G = \Delta H - T \cdot \Delta S \text{ för en isoterm process.}&
+	\end{flalign*}
+	\begin{flalign*}
+   & \textbf{Exergi: } X_{\text{värme}}=\left( 1-\dfrac{T_{\text{omgivning}}}{T_{\text{källa}}}\right)\cdot Q & \\
+   & X_{\text{arbete}}=W_t = W - p \cdot (V_2 - V_1) &
+	\end{flalign*}
+\section*{Termodynamiska processer}
+	\begin{flalign*}
+    &\textbf{Isokor process: } V = konstant & \\
+		&Q = m \cdot c_v \cdot \Delta t & \\
+		&w = v \cdot \Delta p... & 
+	\end{flalign*}
+	\begin{flalign*}
+    &\textbf{Isobar process: } p = konstant & \\
+		&Q = m \cdot c_p \cdot \Delta t & \\
+		&w = 0 & 
+	\end{flalign*}
+	\begin{flalign*}
+    & \textbf{Isoterm process: }  T = konstant & \\
+		& Q = W = m \cdot R \cdot T \cdot \ln \dfrac{p_1}{p_2}= & \\
+		& = m \cdot R \cdot T \cdot \ln \dfrac{v_2}{v_1} & \\
+		&  w = R \cdot T \cdot \ln \dfrac{p_1}{p_2}=R \cdot T \cdot \ln \dfrac{v_2}{v_1}= T \cdot (s_2 - s_1) \text{ för en ideal gas.} & 
+	\end{flalign*}  
+	\begin{flalign*}  
+		&  \textbf{Adiabat och ise}  \textbf {ntrop process: } & \\ 
+		&  \Delta  Q = 0 \text{ och } \Delta s = 0 & \\
+		& q=0 & \\
+		& w_t = i_2 - i_1 & 
+	\end{flalign*}
+	\begin{flalign*}
+    & \textbf{Carnotprocess: } \eta_c = \dfrac{\Delta s \cdot (T_1 - T_2)}{\Delta s \cdot (T_1 - 0)}= 1 - \dfrac{T_2}{T_1} &
+	\end{flalign*}

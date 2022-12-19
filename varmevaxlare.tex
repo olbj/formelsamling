@@ -1,0 +1,42 @@
+\chapter{Värmeväxlare}
+\section*{Beteckningar}
+
+\acrfull{A} \\
+\acrfull{cp} \\
+\acrfull{m} \\
+\acrfull{mprick} \\
+\acrfull{T} \\
+\acrfull{U} \\
+\acrfull{etaepsilon} \\
+\acrfull{Cprick} \\
+\acrfull{Q} \\
+\acrfull{Qprick} \\
+\acrfull{Hjd}
+
+\section*{Värmebalanser}
+	\begin{align*}
+		\dot{Q}&=\dot{m}_k\cdot c_{p,k}\cdot (T_{k,in}-T_{k,ut}) = \\
+		       &=\dot{m}_v\cdot c_{p,v}\cdot (T_{v,in}-T_{v,ut}) = \\
+		       &=U \cdot A_s \cdot \Delta T_{lm} 
+	\end{align*}
+	\begin{align*}
+	\Delta T_{lm} = \dfrac{\Delta T_1 - \Delta T_2}{ln \left( \dfrac{\Delta T_1}{\Delta T_2}\right)}
+	\end{align*}
+	\begin{tabular}{l l l l}
+    &&\textit{Motströmsvärmeväxlare} & \textit{Medströmsvärmeväxlare} \\
+    &&$\Delta T_1 = T_{v,in} - T_{k,ut}$ & $\Delta T_1 = T_{v,in} - T_{k,in}$ \\
+    &&$\Delta T_2 = T_{v,ut} - T_{k,in}$ & $\Delta T_1 = T_{v,ut} - T_{k,ut}$ \\
+	\end{tabular}
+	\section*{NTU-metoden}
+	Temperatureffektivitet, värmeväxlareffektivtet
+	\begin{align*}
+		&\varepsilon = \dfrac{\cdot{Q}}{\cdot{Q}_{max}}=\dfrac{\textit{Verklig överförd värmeeffekt}}{\textit{Teoretiskt maximalt överförd värmeeffekt}}
+	\end{align*}
+	\begin{align*}
+		\dot{Q}&=C_k \cdot (T_{k_ut} - T_{k_in}) \\
+		       &=C_v \cdot (T_{v_ut} - T_{v_in})
+	\end{align*}
+	\begin{align*}
+	&\dot{Q}_{max}=C_{min} \cdot (T_{v_in} - T_{k_in}) \text{ där } C_{min} = \text{min} \{C_v, C_k\} \\
+	&\textit{NTU}=\dfrac{U \cdot A_s}{C_{min}} \text{ där } A_s \text{ är värmeväxlarens värmeöverförande yta.}
+	\end{align*}

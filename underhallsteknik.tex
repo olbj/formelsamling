@@ -1,0 +1,192 @@
+\chapter{Underhållsteknik}
+\section*{Beteckningar}
+\acrfull{Autg}\\
+\acrfull{lambdaFI}\\
+\acrfull{Kutg}\\
+\acrfull{MRT}\\
+\acrfull{MWT}\\
+\acrfull{MDT}\\
+\acrfull{MTTF}\\
+\acrfull{MTBF}\\
+\acrfull{MTTR}\\
+\acrfull{Tlg}\\
+\acrfull{TAK}
+
+	\section*{Definitioner}
+	Begrepp och nyckeltal definieras i svensk standard SS-EN 13306 och SS-EN 15341. Dessa är sammanfattade i SSG rapport "Underhållseffektivitet, terminilogi och nyckeltal".
+	
+	\subsection*{Definitioner enlig SS\_EN standard}
+	
+	Viktiga definioner enlig SSG rapport "Underhållseffektivitet, terminologi och nyckeltal (2015) är:
+\begin{itemize}	
+  \item Enhet: Del, komponent, anordning, delsystem, funktionell apparat, utrustning eller system som kan individuellt beskrivas och beaktas. 
+  \item Fel: Upphörande av förmågan hos en enhet att utföra en krävd funktion. 
+  \item Funktionsfel: Tillstånd hos en enhet karakteriserat av oförmåga att utföra en krävd funktion, exkluderat en oförmåga som kan uppstå vid förebyggande underhåll eller annan planerad åtgärd eller brist på stödfunktioner
+	\item Underhåll: Kombination av alla tekniska, administrativa och ledningens åtgärder under en enhets livstid avsedda att vidmakthålla den i, eller återställa den till, ett sådant tillstånd att den kan utföra krävd funktion.
+  % \item Förebyggande underhåll: Underhåll som genomförs vid förutbestämda intervall eller enligt förutbestämda kriterier och i avsikt att minska sannolikheten för fel eller degradering av en enhets funktion.
+  \item Förebyggande underhåll: Underhåll som genomförs vid förutbestämda intervall eller enligt förut\-bestämda kriterier och i avsikt att minska sannolikheten för fel eller degradering av en enhets funktion.
+	\item Förutbestämt underhåll: Förebyggande underhåll som genomförs i enlighet med bestämda intervaller eller efter en bestämd användning, men utan att föregås av tillståndskontroll.
+	\item Tillståndsbaserat underhåll: Förebyggande underhåll som består av kontroll och övervakning av en enhets tillstånd avseende dess funktion och egenskaper, samt därav föranledda åtgärder
+	\item Förutsägbart underhåll: Tillståndsbaserad underhållsåtgärd som genomförs som följd av en förutsägelse om en enhets försämrade funktion baserad på analys och utvärdering av viktiga egenskaper.
+	\item Förbättring: Kombination av alla tekniska, administrativa samt ledningens åtgärder, avsedda att förbättra en enhets tillförlitlighet, utan att ändra dess krävda funktion.
+	\item Modifiering: Kombination av alla tekniska, administrativa och ledningens åtgärder, avsedda att ändra en enhets funktion.
+	\item Avhjälpande underhåll:Underhåll som genomförs efter det att funktionsfel upptäckts och med avsikt att få enheten i ett sådant tillstånd att den kan utföra krävd funktion.
+	\item Uppskjutet avhjälpande underhåll: Avhjälpande underhåll som inte genomförs omedelbart efter att ett funktionsfel upptäckts utan senareläggs i enlighet med givna underhållsdirektiv.
+	\item Akut avhjälpande underhåll: Underhåll som genomförs omedelbart efter det att funktionsfel upptäckts för att undvika oacceptabla konsekvenser
+	\item Operatörsunderhåll: Underhåll som genomförs av en enhets användare eller operatör
+\end{itemize}	
+	
+	
+	\subsection*{Definitioner från Hagberg och Henriksson "Underhåll i världsklass"}
+	
+\begin{itemize}	
+	\item Stopptid: = Väntetid + reparationstid
+	\item Totalt disponibel tid\textsubscript{x}: = Obelagd tid + Totalt disponibel tid\textsubscript{y}
+	\item Obelagd tid = planeringsfaktorn
+	\item Totalt disponibel tid\textsubscript{y} = Planerad produktionstid
+	\item Tillgänglig tid av planerad produktionstid är Totalt disponibel tid\textsubscript{y} - Stopptid
+	\item MRT = Mean repair time: Tid att utföra reparation
+	\item MWT = Mean waiting time: Väntetid fram till reparation
+	\item MDT = Mean down time: Genomsnittligt stopptid
+\end{itemize}	
+	
+
+	\section*{Nyckeltal}
+	Standard SS-EN 15341 beskriver nyckeltalen i tre grupper:
+	\begin{itemize}
+	 \item E - Ekonomiska nyckeltal
+	 \item O - Organisatoriska nyckeltal
+	 \item T - Tekniska nyckeltal
+	\end{itemize}
+Nyckeltalen är sedan indelade i olika nivåer.
+\subsection*{Ekonomiska nyckeltal}
+		$\textbf{E1: } \dfrac{\text{Total underhållskostnad}}{\text{Återanskaffningsvärde}} \cdot 100$
+			
+		$\textbf{E3: } \dfrac{\text{Total underhållskostnad}}{\text{Total produktioh}}$
+
+		$\textbf{E15: } \dfrac{\text{Kostnad för avhjälpande underhåll}}{\text{Total underhållskostnad}} \cdot 100$
+
+		$\textbf{E16: } \dfrac{\text{Kostnad för förebyggande underhåll}}{\text{Total underhållskostnad}} \cdot 100$
+
+		$\textbf{E17: } \dfrac{\text{Kostnad för tillståndsbaserat underhåll}}{\text{Total underhållskostnad}} \cdot 100$
+
+		$\textbf{E18: } \dfrac{\text{Kostnad för förutbestämt underhåll}}{\text{Total underhållskostnad}} \cdot 100$
+
+		$\textbf{E19: } \dfrac{\text{Kostnad för förbättring}}{\text{Total underhållskostnad}} \cdot 100$
+\subsection*{Tekniska nyckeltal}
+\subsubsection*{Enligt SS\_EN standard}
+		$\textbf{T1: } \dfrac{\text{Total drifttid}}{\text{Total drifttid + Driftstopp på grund av underhåll}} \cdot 100$
+	
+		$\textbf{T17: } MTBF= \dfrac{\text{Total drifttid}}{\text{Totalt antal fel}} = MTTF + MDT$
+	
+		$\textbf{T21: } MTTR = MDT = \dfrac{\text{Total tid för återställande}}{\text{Totalt antal fel}} = MRT + MWT$
+		\subsubsection*{Enligt Hagberg och Henriksson, Underhåll i världsklass}
+		
+			Operativ prestation: 
+      \begin{align*}
+        =\left( \dfrac{\text{Enheter}}{\text{Maskintimme}} \right) \cdot \left( \dfrac{\text{Maskintimmar}}{\text{År}} \right)= \text{ enheter/år}
+      \end{align*}
+			
+			Tillgänglighet: 
+      \begin{align*}
+      T = \dfrac{\text{Totalt disponibel tid} - \text{Obelagd tid}}{\text{Totalt disponibel tid}}
+      \end{align*}
+			
+			Tillgänglighet i seriekopplade funktioner: 
+      \begin{align*}
+      T = T_1 \cdot T_2 \cdot T_3 \cdot \ldots  \cdot T_n 
+      \end{align*}
+			
+			Tillgänglighet i parallellkopplade funktioner: 
+      \begin{align*}
+      T = 1 - (1-T_1) \cdot (1-T_2) \cdot (1-T_3) \cdot \ldots  \cdot 1-T_n) 
+      \end{align*}
+			
+			Funktionssäkerhet: 
+      \begin{align*}
+      MTTF = \dfrac{\text{Verkligt utnyttjad drifttid}}{\text{Antalet fel}} 
+      \end{align*}
+			
+			Underhållsmässighet: 
+      \begin{align*}
+      MRT = \dfrac{\text{Total reparationstid}}{\text{Antalet fel}} 
+      \end{align*}
+			
+			Underhållssäkerhet: 
+      \begin{align*}
+      MWT = \dfrac{\text{Total väntetid}}{\text{Antalet fel}} 
+      \end{align*}
+			
+			Tillgängligheten: 
+      \begin{align*}
+      T = \dfrac{MTTF}{MTTF+MRT+MWT}
+      \end{align*}
+
+			Genomsnittligt stopptid: 
+      \begin{align*}
+      MDT = MTTR = MRT + MWT
+      \end{align*}
+
+			Felintensitet: 
+      \begin{align*}
+      \lambda = \dfrac{1}{MTTF} 
+      \end{align*}
+
+			textbf{Tillgängligheten: }
+      \begin{align*}
+      \lambda = \dfrac{1}{1+MDT\cdot\lambda} 
+      \end{align*}
+			
+      Genomsnittsproduktion: 
+      \begin{align*}
+			 = \dfrac{\text{Totalt tillverkad volym under mätperioden}}{\text{Tillgänglig tid under mätperioden}} 
+      \end{align*}
+			
+			\subsubsection*{T.A.K - beräkning}
+			
+      Tillgänglighet: 
+      \begin{align*}
+			T = \dfrac{\text{Totalt tillgänligt tid} - \text{Stopptid}}{\text{Totalt tillgänlig tid}}
+      \end{align*}
+			
+      Anläggningsutnyttjande:  
+      \begin{align*}
+			A = \dfrac{\text{Bruttoproduktion}}{\text{Totalt tillgänlig tid}\cdot T \cdot \text{Maximal produktionshastighet}}
+      \end{align*}
+				
+      Kvalitetsutbyte:  
+      \begin{align*}
+			K = \dfrac{\text{Bruttoproduktion} -\text{Defekt produktion}}{\text{Bruttoproduktion}}
+      \end{align*}
+				
+		 Utrustningseffektivitet:  
+      \begin{align*}
+			TAK = T \cdot A \cdot K
+      \end{align*}
+			
+\subsection*{Organisatoriska nyckeltal}
+		\subsubsection*{Enligt SS\_EN standard}
+		$\textbf{O4: } \dfrac{\text{Arbetstimmar underhåll som utförs av produktionsoperatör}}{\text{Totalt antal arbetstimmar som utförs av direkt underhållspersonal}} \cdot 100$
+
+		$\textbf{O5: } \dfrac{\text{Planerade och schemalagda arbetstimmar för underhåll}}{\text{Toalt antal tillgängliga timmar}} \cdot 100$
+		
+		$\textbf{O9: } \dfrac{\text{Arbetstimmar underhåll som utförs av produktionsoperatör}}{\text{Totalt antal arbetstimmar som utförs av produktionsoperatörer}} \cdot 100$
+		
+		$\textbf{O16: } \dfrac{\text{Arbetstimmar avhjälpande underhåll}}{\text{Totalt antal arbetstimmar för underhåll}} \cdot 100$
+		
+		$\textbf{O17: } \dfrac{\text{Arbetstimmar akut avhjälpande underhåll}}{\text{Totalt antal arbetstimmar för underhåll}} \cdot 100$
+		
+		$\textbf{O18: } \dfrac{\text{Arbetstimmar förebyggande underhåll}}{\text{Totalt antal arbetstimmar för underhåll}} \cdot 100$
+		
+		$\textbf{O19: } \dfrac{\text{Arbetstimmar tillståndsbaserat underhåll}}{\text{Totalt antal arbetstimmar för underhåll}} \cdot 100$
+		
+		$\textbf{O20: } \dfrac{\text{Arbetstimmar förutbestämt underhåll}}{\text{Totalt antal arbetstimmar för underhåll}} \cdot 100$
+\section*{Tillgänglighet}
+			Tillgängligheten för en komponent: \\ 
+      $ 0 \leqslant T \leqslant 1 $
+			
+			Systemtillgänglighet för seriekopplade komponenter:  \\ 
+      $T_{system} = T_1 \cdot T_2 \cdot T_3 \cdots T_n$ 
+			
+			Systemtillgänglighet för parallellkopplade komponenter:  \\ 
+      $ T_{system} = 1- \left(1 - T_1 \right) \cdot  \left(1 - T_2 \right) \cdot  \left(1 - T_3 \right) \cdots  \left(1 - T_n \right)$ 

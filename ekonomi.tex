@@ -1,0 +1,72 @@
+\chapter{Ekonomi}
+\section*{Beteckningar}
+\acrfull{når}\\
+\acrfull{Au}\\
+\acrfull{fA}\\
+\acrfull{GI}\\
+\acrfull{qi}\\
+\acrfull{LCC}\\
+\acrfull{ai}\\
+\acrfull{Ci}\\
+\acrfull{fN}\\
+\acrfull{N}\\
+\acrfull{Rvd}\\
+\acrfull{r}\\
+\acrfull{SV}\\
+\acrfull{TauP}
+
+\section*{Index}
+	\begin{tabularx}{\linewidth} { l
+	>{\raggedright\arraybackslash\hsize=1.5\hsize\linewidth=\hsize}X
+	>{\raggedright\arraybackslash\hsize=0.5\hsize\linewidth=\hsize}X}
+	\textit{0} & Värde vid tidpunkt 0 (idag)\\ 
+  \textit{n} & Värde vid tidpunkt n\\ 
+	\textit{N} & Nuvärde 
+	\end{tabularx}
+
+\section*{Formler och samband}
+
+\textbf{Nuvärde}
+\begin{equation*}
+  N=K_n \cdot (1 + r)^{-n} = SN \cdot (1 + r)^{-n}
+\end{equation*}
+
+\textbf{Nuvärdesmetoden}
+\begin{align*}
+  & N = \sum_{i=1}^{n} C_i \cdot (1+r)^{-i} \\
+  & N = \sum_{i=1}^{n} a \cdot (1+r)^{-i} = f_N \cdot a \\
+  & \text{om det årliga intäktsöverskottet är konstant.} \\
+  & f_N = \dfrac{1-(1+r)^{-n}}{r} = \dfrac{1}{f_A}
+\end{align*}
+
+\textbf{Annuitetsmetoden}
+\begin{align*}
+  & A = f_A \cdot N \\
+  & f_A = \dfrac{r}{1-(1+r)^{-n}} = \dfrac{1}{f_N}
+  % & N = \sum_{i=1}^{n} C_i \cdot (1+r)^{-i} \\
+  % & N = \sum_{i=1}^{n} a \cdot (1+r)^{-i} = f_N \cdot a \\
+  % & \text{om det årliga intäktsöverskottet är konstant.} \\
+\end{align*}
+
+\textbf{Slutvärde}
+\begin{equation*}
+ K_n= SV =N \cdot (1 + r)^n
+\end{equation*}
+
+\textbf{Realränta}
+\begin{equation*}
+  r_r = \dfrac{1+r}{1+q} \approx r - q 
+\end{equation*}
+där $r$ är den nominella räntan eller kalkylräntan.
+
+\textbf{Paybackmetoden}
+\begin{align*}
+  & \text{Generellt: }\sum_{i=0}^{T} C_i = 0 \\
+  & \text{Diskonterad paybackmetod: }\sum_{i=0}^{T} C_i \cdot (1+r)^{-i} = 0 \\
+  &  T = \dfrac{G}{a} \text{ om det årliga intäktsöverskottet är konstant. } 
+\end{align*}
+
+\textbf{Life Cycle Cost (LCC)}
+\begin{align*}
+  LCC = G + \sum_{i=0}^{n} K_{N,i} - \sum_{i=0}^{n} I_{N,i} - R_N
+\end{align*}

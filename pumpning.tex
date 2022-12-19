@@ -1,0 +1,66 @@
+\chapter{Pumpsystem}
+\section*{Beteckningar}
+
+\acrfull{W} \\
+\acrfull{Wprick} \\
+\acrfull{A} \\
+\acrfull{rho} \\
+\acrfull{d} \\
+\acrfull{xi} \\
+\acrfull{hjd} \\
+\acrfull{L} \\
+\acrfull{m} \\
+\acrfull{g} \\
+\acrfull{m} \\
+\acrfull{mprick} \\
+\acrfull{hfl} \\
+\acrfull{T} \\
+\acrfull{p} \\
+\acrfull{lambdat} \\
+\acrfull{n} \\
+\acrfull{V} \\
+\acrfull{v} \\
+\acrfull{Vprick} \\
+\acrfull{eta} \\
+\acrfull{Hjd}
+
+\section*{Formler och samband}
+	\textbf{Teoretiskt pumparbete vid en isokor process: } $w=v \cdot \Delta p$ \par
+\textbf{Energiekvationen }  
+	\begin{align*}
+    & p_1 + \varrho \cdot g \cdot h_1 + \dfrac{v_1^2}{2} \cdot \rho \cdot  \Delta p_{pump} = \\ 
+    & = p_2 + \varrho \cdot g \cdot h_2 + \dfrac{v_2^2}{2} \cdot \rho \cdot  \Delta p_{f12} 
+	\end{align*}
+\textbf{Uppfordringshöjd:} 
+	\begin{align*}
+    H_{pump} & = \dfrac{p_{ut}-p_{in}}{\varrho \cdot g}+\dfrac{v^2_{ut}-v^2_{in}}{2\cdot g}+h_{ut}-h_{in} + \Delta h_f = &\\
+    & = \dfrac{p_{0,ut}-p_{0,in}}{\varrho \cdot g}+h_{ut}-h_{in} + \Delta h_f  
+	\end{align*}
+	där $p_{ut}-p_{in}$ är ökningen av det statiska trycket och $p_{0,ut}-p_{0,in}$ är ökningen av  
+totaltrycket i pumpen. $\Delta h_f$ är friktionsförluster i rörsystemet. \par
+	\textbf{Pumparbete: }
+	\begin{align*}
+    & \dot{W} = \dfrac{\dot{W}_n}{\eta_{tot}} = \dfrac{\dot{V}\cdot\varrho\cdot{H}}{\eta_{tot}}= \dfrac{\dot{m}\cdot g \cdot H }{\eta_{tot}}=  
+    \dfrac{\dot{V}\cdot\Delta p_t}{\eta_{tot}} & 
+	\end{align*}
+       där $ \Delta p_t $  är totala tryckökningen i pumpen. \par
+	\textbf{Likformighetslagar } 
+	\begin{align*}
+  & \dot{V} \propto n \cdot D^3 & \\ 
+	& \dot{m} \propto n \cdot \varrho \cdot  D^3 \\ 
+  & H\propto n^2 \cdot D^2  \\
+  & \dot{W}\propto n^3 \cdot \varrho \cdot D^5  
+	\end{align*}
+	\textbf{Strömningsförluster: } 
+	\begin{equation*}
+		h_f \approx konst \cdot \dot{V}^2
+	\end{equation*}
+	\textit{Strömingsförluster i rör::}
+	\begin{equation*}
+		h_f = \dfrac{\lambda \cdot L \cdot v^2_m}{2 \cdot d \cdot g} =  \dfrac{8 \cdot \lambda \cdot L \cdot \dot{V}}{\pi^2 \cdot d^5 \cdot g}
+	\end{equation*}
+		där $v_m$ är fluidens medelhastighet \par 
+	\textit{Strömningsförluster som beror på engångsförluster i ventiler, rörböjar etc:} 
+	\begin{equation*}
+		h_f = \dfrac{\xi \cdot v^2_m}{2 \cdot d \cdot g}	\end{equation*}
+ där $\xi$ är summan av engångsförlustkoefficienterna för systemet. 

@@ -1,0 +1,77 @@
+\chapter{Kraft- och kylprocesser}
+\section*{Beteckningar}
+\acrfull{COP}\\
+\acrfull{mprick}\\
+\acrfull{eta}\\
+\acrfull{v}\\
+\acrfull{Qprick}\\
+\acrfull{h}\\
+\acrfull{s}\\
+\acrfull{x} \par
+\section*{Ångkraftprocessen}
+\subsection*{Index}
+	\begin{tabularx}{\linewidth} { l
+	>{\raggedright\arraybackslash\hsize=1.5\hsize\linewidth=\hsize}X
+	>{\raggedright\arraybackslash\hsize=0.5\hsize\linewidth=\hsize}X}
+	\textit{f} & fuktig ånga\\ 
+	\textit{is} & isentrop\\ 
+	\textit{t1} & tillstånd efter kondensor\\ 
+	\textit{t2} & tillstånd efter matarvattenpump\\ 
+	\textit{t3} & tillstånd efter överhettare\\ 
+	\textit{t4} & tillstånd efter turbin\\ 
+	\textit{'} & mättad vätska; ingående flöde\\ 
+	\textit{''} & mättad ånga; utgående flöde\\ 
+	\end{tabularx}
+	\textbf{Ånghalt:}
+	\begin{align*}
+		x = \dfrac{h_f-h'}{h''-h'} = \dfrac{s_f-s'}{s''-s'} = \dfrac{v_f-v'}{v''-v'}
+	\end{align*}
+	\textbf{Entalpi i fuktiga området:}
+	\begin{align*}
+		h_f = x \cdot h'' + (x  - 1)  \cdot h' = x \cdot (h'' - h') + h' = x \cdot r + h' 
+	\end{align*}
+	\textbf{Termisk verkniningsgrad:}
+	\begin{align*}
+		\eta_t=\dfrac{(h_{t3}-h_{t4})-(h_{t2}-h_{t1})}{h_{t3}-h_{t2}}=1-\dfrac{h_{t4}-h_{t1}}{h_{t3}-h{t2}}
+	\end{align*}
+	\textbf{Turbinens isentropverkningsgrad:}
+	\begin{align*}
+		\eta_is=\dfrac{h_{t3}-h_{t4}}{h_{t3}-h_{t4,is}}
+	\end{align*}
+	\textbf{Värmebalans förvärmare:}
+	\begin{align*}
+		\dot{m}_{1,in}\cdot h_{1,in}+\dot{m}_{2,in}\cdot h_{2,in} = \dot{m}_{1,ut}\cdot h_{1,ut}+\dot{m}_{2,ut}\cdot h_{2,ut}
+	\end{align*}
+	\textbf{Massbalans blandningsförvärmare:}
+	\begin{align*}
+		\dot{m}_{1,in}+\dot{m}_{2,in} = \dot{m}_{3,ut}
+	\end{align*}
+\section*{Kylmaskiner och värmepumpar}
+\subsection*{Index}
+	\begin{tabularx}{\linewidth} { l
+	>{\raggedright\arraybackslash\hsize=1.5\hsize\linewidth=\hsize}X
+	>{\raggedright\arraybackslash\hsize=0.5\hsize\linewidth=\hsize}X}
+	\textit{is} & isentrop\\ 
+	\textit{t1} & tillstånd efter förångare\\ 
+	\textit{t2} & tillstånd efter kompressor\\ 
+	\textit{t3} & tillstånd efter kondensor\\ 
+	\textit{t4} & tillstånd efter ventil\\ 
+	\textit{L} & Tillfört värme i förångaren\\ 
+	\textit{H} & Avgivet värme i kondensorn\\ 
+	\textit{R} & Kylmaskin\\ 
+	\textit{HP} & Värmepump\\ 
+	\end{tabularx}
+	\textbf{Värmebalanser:}
+	\begin{align*}
+		{\dot{Q}}_{L} &  ={\dot{m}}_{\textit{köldmedium}}  \cdot (h_{t1} - h_{h4}) \\
+		{\dot{Q}}_{H} &  ={\dot{m}}_{\textit{köldmedium}}  \cdot (h_{t2} - h_{h3}) \\
+	\end{align*}
+	\textbf{Värmefaktor:}
+	\begin{align*}
+		\textit{COP}_{R}  & =  \dfrac{{\dot{Q}}_{L}}{{\dot{W}}_{kompressor}}  \\
+		\textit{COP}_{HP}  & =  \dfrac{{\dot{Q}}_{H}}{{\dot{W}}_{kompressor}}  \\
+	\end{align*}
+	\textbf{Kompressorns isentropverkningsgrad:}
+	\begin{align*}
+		\eta_is=\dfrac{h_{t2,is}-h_{t1}}{h_{t2}-h_{t1}}
+	\end{align*}

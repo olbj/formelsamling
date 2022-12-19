@@ -1,0 +1,71 @@
+\chapter{Värmeöverföring}
+\section*{Beteckningar}
+\acrfull{A}\\
+\acrfull{d}\\
+\acrfull{Vv}\\
+\acrfull{cp}\\
+\acrfull{ny}\\
+\acrfull{mprick}\\
+\acrfull{Nu}\\
+\acrfull{Pr}\\
+\acrfull{Re}\\
+\acrfull{Ov}\\
+\acrfull{T}\\
+\acrfull{delta}\\
+\acrfull{Qprick}\\
+\acrfull{U}\\
+\acrfull{lambda}\\
+\acrfull{Rv}\\
+\acrfull{alfa}
+
+\section*{Värmeledning}
+\textbf{Värmeledning genom plan vägg: }
+ \begin{align*}
+	\dot{Q} & = - \lambda \cdot A \cdot \dfrac{dT}{dx} = \lambda \cdot A \dfrac{T_1-T_2}{\delta} = \\
+		& = \dfrac{(T_1-T_2)}{\left(\dfrac{\delta}{\lambda \cdot A}\right)}  = \left| \dfrac{\delta}{\lambda \cdot A}=R \right| =\dfrac{T_1-T_2}{R}
+ \end{align*}
+ där $T_1$ och $T_2$ är temperaturena på väggens varma respektive kalla yta. \par
+ \textbf{Värmeledning genom kompositvägg med konvektionsöverföring:} 
+	\begin{align*}
+		\dot{Q} &= U \cdot A \cdot (T_i - T_u) =\\
+		& = \dfrac{(T_i-T_u) \cdot A}{\left(\dfrac{1}{\alpha_i}+\dfrac{\delta_1}{\lambda_1}+ \dfrac{\delta_2}{\lambda_2}+\cdots +\dfrac{\delta_n}{\lambda_n}+\dfrac{1}{\alpha_u}\right)} = \\
+		 & = \dfrac{(T_i-T_u)}{\left(\dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfrac{\delta_2}{\lambda_2 \cdot A}+\cdots +\dfrac{\delta_n}{\lambda_n\cdot A} +\dfrac{1}{\alpha_u \cdot A}\right)} = \\
+		 & = \dfrac{(T_i-T_u)}{R_{tot}}\\
+		U &= \dfrac{1}{R_{tot}}
+	\end{align*}
+ där $T_i$ och $T_u$ är temperaturena i väggens varma respektive kalla omgivning, långt från väggen. \par
+\section*{Konvektion}
+\textbf{Dimensionslösa tal} 
+	\begin{gather*}
+	\textit{Reynolds tal: } \\
+	  Re   = \dfrac{v_m \cdot d_h}{\nu} =  \\ 
+    \text{~~~}= \left| \mu = \dfrac{\nu}{\varrho}	\right| =\dfrac{v_m \cdot d_h \cdot \varrho}{\mu}  \\
+	   d_h \text{ (hydraliska diametern )} = \dfrac{4 \cdot \textit{tvärsnittsarean}}{\textit{våt omkrets}} = \dfrac{4 \cdot A}{O} \\
+	    v_m \text{ (medelhastigheten )} = \dfrac{\dot{m}}{\varrho \cdot A}
+	\end{gather*}
+\textit{Prandtls tal}
+	\begin{equation*}
+    Pr = \dfrac{c_p \cdot \mu}{\lambda} = \dfrac{c_p \cdot \nu \cdot \varrho}{\lambda} = \dfrac{\nu}{\alpha}
+	\end{equation*}
+\textit{Nusselts tal}
+	\begin{equation*}
+	Nu = \dfrac{\alpha \cdot d_h}{\lambda} 
+	\end{equation*}
+	Korrelationer för \acrfull{Nu} finns till exempel i  \cite{soleimani_mohseni_formelsamling_2018} och \cite{alvarez_energiteknik_2006}
+  \subsection*{Samband mellan tryckfall och värmeöverföringskoefficient för cirkuära rör}
+\subsubsection*{Konstanta röregenskaper, variabelt volymflöde}
+\begin{tabularx}{\linewidth} { l l}
+	% >{\raggedright\arraybackslash\hsize=1.9\hsize\linewidth=\hsize}X
+	% >{\raggedright\arraybackslash\hsize=0.1\hsize\linewidth=\hsize}X}
+  \textit{Laminärt flöde} & \textit{Turbulent flöde} \\ 
+  $P_f \text{ } \propto \text{ } v \text{ } \propto \text{ } \dot{V}$ & $p_f \text{ } \propto \text{ } v^{1,75 \text{ till } 2}$\\
+  $\alpha \text{ } \propto \text{ } v^{0 \text{ till } 0,3}$ & $\alpha \text{ } \propto \text{ } v^{0,8}$\\
+	\end{tabularx}
+\subsubsection*{Konstant volymflöde, variabel rördiameter}
+\begin{tabularx}{\linewidth} { l l}
+	% >{\raggedright\arraybackslash\hsize=1.9\hsize\linewidth=\hsize}X
+	% >{\raggedright\arraybackslash\hsize=0.1\hsize\linewidth=\hsize}X}
+  \textit{Laminärt flöde} & \textit{Turbulent flöde} \\ 
+  $p_f \text{ } \propto \text{ } d^{-4}$ & $p_f \text{ } \propto \text{ } d^{-(4,75 \text{ till } 5)}$\\
+  $\alpha \text{ } \propto \text{ } d^{-1}$ & $\alpha \text{ } \propto \text{ } d^{-1,8}$\\
+	\end{tabularx}
