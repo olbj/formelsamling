@@ -1,5 +1,5 @@
 # formelsamling
-Formelsamling i energiteknik
+Formelsamling i energiteknik.
 
 This is an energy enegineering formula collection written in Latex. The purpose of the 
 collection is to use the formulas in energy engineering undergraduate courses.
