@@ -22,6 +22,7 @@
 \usepackage[export]{adjustbox}
 \usepackage[toc,acronym,nonumberlist]{glossaries}
 \usepackage[yyyymmdd]{datetime}
+\usepackage{hyperref}
 \loadglsentries{symboler.tex}
 \makeglossaries
 %\newglossaryentry{testgl}{name={testgl},description={test glossary}}
@@ -33,15 +34,15 @@
 % \maketitle
 \tableofcontents
 \setlength\LTleft{0 cm}
-% \import{./}{general.tex}
+\import{./}{general.tex}
 \import{./}{varmelara.tex}
 \import{./}{varmeoverforing.tex}
-% \import{./}{stromningslara.tex}
-% \import{./}{pumpning.tex}
-% \import{./}{varmevaxlare.tex}
-% \import{./}{kraftprocesser.tex}
-% \import{./}{ekonomi.tex}
-% \import{./}{underhallsteknik.tex}
+\import{./}{stromningslara.tex}
+\import{./}{pumpning.tex}
+\import{./}{varmevaxlare.tex}
+\import{./}{kraftprocesser.tex}
+\import{./}{ekonomi.tex}
+\import{./}{underhallsteknik.tex}
 \cleardoublepage
 \printglossary[title=Symboler, toctitle=Symboler, type=\acronymtype]
 \cleardoublepage
