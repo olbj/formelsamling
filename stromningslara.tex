@@ -1,5 +1,51 @@
 \chapter{Strömningslära}
 \section*{Beteckningar}
-% \acrfull{alfa}
+\acrfull{A} \\
+\acrfull{rho} \\
+\acrfull{my} \\
+\acrfull{xi} \\
+\acrfull{hjd} \\
+\acrfull{Vv} \\
+\acrfull{ny} \\
+\acrfull{mprick} \\
+\acrfull{O} \\
+\acrfull{p} \\
+\acrfull{lambdat} \\
+\acrfull{g}
 
 \section*{Formler och samband}
+\textbf{Kontinuitetsektvationen för endimensionell stationär strömning} 
+	$\varrho_1\cdot v_1\cdot A_1 = \varrho_2\cdot v_2\cdot A_2 \corresponds \dot{m_1} = \dot{m_2} $ \par
+	\textbf{Kontinuitetsekvationen vid konstant densitet:} \\
+	$  V_1\cdot A_1 =  V_2\cdot A_2 \corresponds \dot{m_1} = \dot{m_2} $ \par
+	\textbf{Bernoullis ekvation} 
+	\begin{flalign*}
+  &\dfrac{v_1^2}{g}+g \cdot h_1 + \dfrac{p_1}{\varrho} = \dfrac{v_2^2}{g} + g \cdot h_2 + \dfrac{p_2}{\varrho} \text{ (J/kg) } & \\
+  &\dfrac{v_1^2 \cdot \varrho}{xg}+\cdot \varrho \cdot g \cdot h_1 + p_1 = \dfrac{v_2^2 \cdot \varrho}{g}+\cdot \varrho \cdot g \cdot h_2 + p_2 \text{ (Pa)} & \\
+  &\dfrac{v_1^2}{\varrho \cdot g}+h_1 + \dfrac{p_1}{\varrho \cdot g} =\dfrac{v_2^2}{\varrho \cdot g}+h_2 + \dfrac{p_2}{\varrho \cdot g} \text{ (m)} &
+	\end{flalign*}
+\textbf{Toricellis teorem. Utströmning ur vätskebehållare}
+\begin{flalign*}
+	& v_{ut} = \mu \cdot \sqrt{2 \cdot g \cdot h} &
+\end{flalign*}
+Utströmning från behållare under tryck:  
+\begin{flalign*}
+	& v_{ut} = \mu \cdot \sqrt{2 \cdot \dfrac{p_1 - p_2}{\varrho} \cdot 2 \cdot g \cdot h} &
+\end{flalign*}
+\textbf{Stagnationstryck, dynamiskt tryck och statistist tryck} 
+\begin{flalign*}
+& \textit{Stagnationstryck: } p_{stat} + \dfrac{\varrho \cdot {v_c}^2}{2} &\\
+& \textit{Dynamiskt tryck: } p_{dyn} =  \dfrac{\varrho \cdot {v_c}^2}{2} &\\
+& \textit{Statiskt tryck: } p_{stat} = \varrho \cdot g \cdot h  \text{ (tryck över atmosfärsstryck)} &\\
+& \textit{Statiskt tryck: } p_{stat} = \varrho \cdot g \cdot h + p_{atm} \text{ (absoluttryck)} &\\
+& \textit{Totalt tryck: } p_{stat} + p_{dyn}&
+\end{flalign*}
+\textbf{Laminär eller turbulent störmning} 
+\begin{flalign*}
+	& Re = \dfrac{v_m \cdot d_h}{\nu} = \dfrac{(v_m \cdot d_h)}{\left(\frac{\mu}{\varrho}\right)} & \\
+	& d_h \text{ (hydraulisk diamater)} = \dfrac{4 \cdot A}{O}
+\end{flalign*}
+\textbf{Tryckförluster vid friktion i rör} 
+\begin{flalign*}
+	& p_f = \lambda \cdot \dfrac{L}{d_h} \cdot \dfrac{\varrho \cdot v^2_m}{2} &
+\end{flalign*}

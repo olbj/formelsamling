@@ -10,13 +10,13 @@
 \acrfull{hjd} \\
 \acrfull{L} \\
 \acrfull{m} \\
-\acrfull{g} \\
-\acrfull{m} \\
 \acrfull{mprick} \\
+\acrfull{NPSH} \\
 \acrfull{hfl} \\
 \acrfull{T} \\
 \acrfull{p} \\
 \acrfull{lambdat} \\
+\acrfull{g} \\
 \acrfull{n} \\
 \acrfull{V} \\
 \acrfull{v} \\
@@ -36,8 +36,13 @@
     H_{pump} & = \dfrac{p_{ut}-p_{in}}{\varrho \cdot g}+\dfrac{v^2_{ut}-v^2_{in}}{2\cdot g}+h_{ut}-h_{in} + \Delta h_f = &\\
     & = \dfrac{p_{0,ut}-p_{0,in}}{\varrho \cdot g}+h_{ut}-h_{in} + \Delta h_f  
 	\end{align*}
-	där $p_{ut}-p_{in}$ är ökningen av det statiska trycket och $p_{0,ut}-p_{0,in}$ är ökningen av  
-totaltrycket i pumpen. $\Delta h_f$ är friktionsförluster i rörsystemet. \par
+$p_{ut}-p_{in}$ = ökningen av det statiska trycket, $p_{0,ut}-p_{0,in}$ = ökningen av totaltrycket i pumpen. $\Delta h_f$ = friktionsförluster i rörsystemet. \par
+\textbf{Kavitation och NPSH}
+ \begin{align*}
+	& \textit{NPSH} = \dfrac{p_{0,s} - p_\text{å}}{\varrho \cdot g} = \dfrac{p_a - p_\text{å}}{\varrho \cdot g} - h_s - h_{fs} \\
+	&	\textit{NPSH} \geq \textit{NPSH}_{erf}
+ \end{align*}
+$p_{0,s}$ = absoluta totaltrycket vid pumpinloppet, $p_\text{å}$ = vätskans ångbildningstryck vid aktuell temperatur, $p_a$ = lufttryck vid en öppen vätskeyta, $h_s$ = höjdskillnad mellan vätskeyta och pumpinlopp, samt $h_{fs}$ = strömningsförluster i sugledningen. $\textit{NPSH}_{erf}$ är pumpens minsta NPSH vid ett givet driftfall.\par
 	\textbf{Pumparbete: }
 	\begin{align*}
     & \dot{W} = \dfrac{\dot{W}_n}{\eta_{tot}} = \dfrac{\dot{V}\cdot\varrho\cdot{H}}{\eta_{tot}}= \dfrac{\dot{m}\cdot g \cdot H }{\eta_{tot}}=  
@@ -55,12 +60,15 @@ totaltrycket i pumpen. $\Delta h_f$ är friktionsförluster i rörsystemet. \par
 	\begin{equation*}
 		h_f \approx konst \cdot \dot{V}^2
 	\end{equation*}
-	\textit{Strömingsförluster i rör::}
-	\begin{equation*}
-		h_f = \dfrac{\lambda \cdot L \cdot v^2_m}{2 \cdot d \cdot g} =  \dfrac{8 \cdot \lambda \cdot L \cdot \dot{V}}{\pi^2 \cdot d^5 \cdot g}
-	\end{equation*}
+	\textit{Strömingsförluster som beror på friktion i cirkulära rör:}
+	\begin{flalign*}
+	&	h_f = \dfrac{\lambda \cdot L \cdot v^2_m}{2 \cdot d \cdot g} =  \dfrac{8 \cdot \lambda \cdot L \cdot \dot{V^2}}{\pi^2 \cdot d^5 \cdot g} \\
+	&	p_f = \rho \cdot g \cdot h_f = \rho \cdot \dfrac{\lambda \cdot L \cdot v^2_m}{2 \cdot d } =  \rho \cdot \dfrac{8 \cdot \lambda \cdot L \cdot \dot{V^2}}{\pi^2 \cdot d^5 }
+	\end{flalign*}
 		där $v_m$ är fluidens medelhastighet \par 
 	\textit{Strömningsförluster som beror på engångsförluster i ventiler, rörböjar etc:} 
-	\begin{equation*}
-		h_f = \dfrac{\xi \cdot v^2_m}{2 \cdot d \cdot g}	\end{equation*}
+	\begin{flalign*}
+	&	h_f = \dfrac{\xi \cdot v^2_m}{2 \cdot d \cdot g}\\	
+	&	p_f = \rho \cdot g \cdot h_f = \rho \cdot \dfrac{\xi \cdot v^2_m}{2 \cdot d}	
+	\end{flalign*}
  där $\xi$ är summan av engångsförlustkoefficienterna för systemet. 
