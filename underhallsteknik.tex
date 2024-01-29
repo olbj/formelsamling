@@ -117,11 +117,6 @@ Nyckeltalen är sedan indelade i olika nivåer.
       MWT = \dfrac{\text{Total väntetid}}{\text{Antalet fel}} 
       \end{align*}
 			
-			Tillgängligheten: 
-      \begin{align*}
-      T = \dfrac{MTTF}{MTTF+MRT+MWT}
-      \end{align*}
-
 			Genomsnittligt stopptid: 
       \begin{align*}
       MDT = MTTR = MRT + MWT
@@ -132,11 +127,13 @@ Nyckeltalen är sedan indelade i olika nivåer.
       \lambda = \dfrac{1}{MTTF} 
       \end{align*}
 
-			textbf{Tillgängligheten: }
+			Tillgängligheten: 
       \begin{align*}
-      \lambda = \dfrac{1}{1+MDT\cdot\lambda} 
+        T &= \dfrac{MTTF}{MTTF+MRT+MWT} = \\ 
+          &= \dfrac{1}{1+MDT\cdot\lambda} =\\
+          &= \dfrac{1}{1+(MRT + MWT) \cdot \lambda}
       \end{align*}
-			
+
       Genomsnittsproduktion: 
       \begin{align*}
 			 = \dfrac{\text{Totalt tillverkad volym under mätperioden}}{\text{Tillgänglig tid under mätperioden}} 
