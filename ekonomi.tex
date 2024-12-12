@@ -33,8 +33,8 @@
 
 \textbf{Nuvärdesmetoden}
 \begin{align*}
-  & N = \sum_{i=1}^{n} C_i \cdot (1+r)^{-i} \\
-  & N = \sum_{i=1}^{n} a \cdot (1+r)^{-i} = f_N \cdot a \\
+  & N = \sum_{i=1}^{n} C_i \cdot (1+r)^{-n} \\
+  & N = \sum_{i=1}^{n} a \cdot (1+r)^{-n} = f_N \cdot a \\
   & \text{om det årliga intäktsöverskottet är konstant.} \\
   & f_N = \dfrac{1-(1+r)^{-n}}{r} = \dfrac{1}{f_A}
 \end{align*}
@@ -58,6 +58,15 @@
   r_r = \dfrac{1+r}{1+q} \approx r - q 
 \end{equation*}
 där $r$ är den nominella räntan eller kalkylräntan.
+
+\textbf{Omvandling från årsränta till annan räntebas}
+\begin{align*}
+  & i = \text{ andel av år.} \\
+  & i = 4 \text{ motsvarar t ex omvandling från årsränta till kvartalsränta}\\
+  & r_i = \text{ omräknad ränta, t ex kvartalsränta}\\
+  & r_i = (1+r)^{\tfrac{1}{i}} - 1 \approx \dfrac{r}{i} 
+\end{align*}
+där $r$ är årsräntan.
 
 \textbf{Paybackmetoden}
 \begin{align*}
