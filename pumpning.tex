@@ -77,7 +77,13 @@ $p_{0,s}$ = absoluta totaltrycket vid pumpinloppet, $p_\text{å}$ = vätskans å
 		där $v_m$ är fluidens medelhastighet \par 
 	\textit{Strömningsförluster som beror på engångsförluster i ventiler, rörböjar etc:} 
 	\begin{flalign*}
-	&	h_f = \dfrac{\xi \cdot v^2_m}{2 \cdot g}\\	
-	&	p_f = \rho \cdot g \cdot h_f = \rho \cdot \dfrac{\xi \cdot v^2_m}{2}	
+	&	h_f = \dfrac{\sum \xi \cdot v^2_m}{2 \cdot g}\\	
+	&	p_f = \rho \cdot g \cdot h_f = \rho \cdot \dfrac{\sum \xi \cdot v^2_m}{2}	
 	\end{flalign*}
- där $\xi$ är summan av engångsförlustkoefficienterna för systemet. 
+ där $\sum \xi$ är summan av engångsförlustkoefficienterna för systemet. \par
+	\textit{Strömningsförluster i cirkulära rör som beror på både friktions- och engångsförluster:} 
+	\begin{flalign*}
+	&	h_f = (\lambda \cdot \dfrac{L}{d}+ \sum \xi )\cdot \dfrac{v^2_m}{2 \cdot g} =(\lambda \cdot \dfrac{L}{d}+ \sum \xi )  \cdot \dfrac{ 8 \cdot \dot{V^2}}{\pi^2 \cdot d^4 \cdot g} \\
+	&	p_f = \rho \cdot g \cdot h_f = \varrho \cdot (\lambda \cdot \dfrac{L}{d}+ \sum \xi )\cdot \dfrac{v^2_m}{2} =\varrho \cdot (\lambda \cdot \dfrac{L}{d}+ \sum \xi )  \cdot \dfrac{8 \cdot \dot{V^2}}{\pi^2 \cdot d^4} \\
+	\end{flalign*}
+
