@@ -60,15 +60,39 @@ $p_{0,s}$ = absoluta totaltrycket vid pumpinloppet, $p_\text{å}$ = vätskans å
   & H \: \propto \: n^2 \cdot D^2  \\
   & \dot{W} \: \propto \: n^3 \cdot \varrho \cdot D^5  
 	\end{align*}
+	\textbf{Parallell- och seriekopplade pumpar} 
+	\begin{table}[h]
+    \caption{Driftfall vid parallell- och seriekopplade pumpar}
+    \centering
+    \begin{tabularx}{\linewidth}{X p{3cm} p{3cm} p{3cm}}
+        \hline
+        Kopplingsfall & Pump 1 & Pump 2 & Kombinerat fall \\
+        \hline
+        Parallellkoppling 
+        							& $H_1 = H_{tot}$ \newline $\dot{V}_1=\dot{V}_{tot} - \dot{V}_{2}$  
+        							& $H_2 = H_{tot}$ \newline $\dot{V}_2=\dot{V}_{tot} - \dot{V}_{1}$
+        							& $H_{tot}=H_1 = H_2$\newline $\dot{V}_{tot}=\dot{V}_{1}+\dot{V}_{2}$\\
+        Seriekoppling 
+        							& $H_1=H_{tot} - H_{2}$ \newline $\dot{V}_1 = \dot{V}_{tot}$ 
+        							& $H_2=H_{tot} - H_{1}$ \newline $\dot{V}_2 = \dot{V}_{tot}$ 
+        							& $H_{tot}=H_1 + H_2$\newline $\dot{V}_{tot}=\dot{V}_{1}=\dot{V}_{2}$\\
+        \hline
+    \end{tabularx}
+\end{table}
+\par
+\begin{minipage}{\textwidth}
 	\textbf{Strömningshastighet för inkompressibla medier: } 
 	\begin{equation*}
     v_m = \dfrac{\dot{V}}{A} =  \dfrac{\dot{m}}{\rho \cdot A}
 	\end{equation*}
 		där $v_m$ är fluidens medelhastighet och $A$ rörets tvärsnittsarea.\par 
+\end{minipage}
+\par
 	\textbf{Strömningsförluster: } 
 	\begin{equation*}
 		h_f \approx konst \cdot \dot{V}^2
 	\end{equation*}
+
 	\textit{Strömingsförluster som beror på friktion i cirkulära rör:}
 	\begin{flalign*}
 	&	h_f = \dfrac{\lambda \cdot L \cdot v^2_m}{2 \cdot d \cdot g} =  \dfrac{8 \cdot \lambda \cdot L \cdot \dot{V^2}}{\pi^2 \cdot d^5 \cdot g} \\
