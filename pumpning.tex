@@ -30,17 +30,20 @@
 
 \section*{Formler och samband}
 	\textbf{Teoretiskt pumparbete vid en isokor process: } $w=v \cdot \Delta p$ \par
-\textbf{Energiekvationen }  
+\textbf{Energiekvationen för pumpar och fläktar}  
 	\begin{align*}
     & p_1 + \varrho \cdot g \cdot h_1 + \dfrac{v_1^2}{2} \cdot \rho +  \Delta p_{pump} = \\ 
-    & = p_2 + \varrho \cdot g \cdot h_2 + \dfrac{v_2^2}{2} \cdot \rho +  \Delta p_{f12} 
+    & = p_2 + \varrho \cdot g \cdot h_2 + \dfrac{v_2^2}{2} \cdot \rho +  \Delta p_{f12} \\
+		& \Delta p_{flakt} = (p_2 - p_1) + \varrho \cdot g \cdot( h_2 -  h_1) + \dfrac{v_2^2-v_1^2}{2} \cdot \rho +  \Delta p_{f12} \approx \\
+		&\approx p_2 - p_1) +  \dfrac{v_2^2-v_1^2}{2} \cdot \rho +  \Delta p_{f12} \\
+		&\text{om }\varrho \cdot g \cdot( h_2 -  h_1) \text{ är litet}
 	\end{align*}
 \textbf{Uppfordringshöjd:} 
 	\begin{align*}
     H_{pump} & = \dfrac{p_{ut}-p_{in}}{\varrho \cdot g}+\dfrac{v^2_{ut}-v^2_{in}}{2\cdot g}+h_{ut}-h_{in} + \Delta h_f = &\\
-    & = \dfrac{p_{0,ut}-p_{0,in}}{\varrho \cdot g}+h_{ut}-h_{in} + \Delta h_f  
+    				 & = \dfrac{p_{0,ut}-p_{0,in}}{\varrho \cdot g}+h_{ut}-h_{in} + \Delta h_f \\
 	\end{align*}
-$p_{ut}-p_{in}$ = ökningen av det statiska trycket, $p_{0,ut}-p_{0,in}$ = ökningen av totaltrycket i pumpen. $\Delta h_f$ = friktionsförluster i rörsystemet. \par
+där $p_{ut}-p_{in}$ = ökningen av det statiska trycket i pumpen, $p_{0,ut}-p_{0,in}$ = ökningen av totaltrycket i pumpen och $\Delta h_f$ = friktionsförluster i rörsystemet. \par
 \textbf{Kavitation och NPSH}
  \begin{align*}
 	& \textit{NPSH} = \dfrac{p_{0,s} - p_\text{å}}{\varrho \cdot g} = \dfrac{p_a - p_\text{å}}{\varrho \cdot g} - h_s - h_{fs} \\
@@ -60,9 +63,8 @@ $p_{0,s}$ = absoluta totaltrycket vid pumpinloppet, $p_\text{å}$ = vätskans å
   & H \: \propto \: n^2 \cdot D^2  \\
   & \dot{W} \: \propto \: n^3 \cdot \varrho \cdot D^5  
 	\end{align*}
-	\textbf{Parallell- och seriekopplade pumpar} 
-	\begin{table}[h]
-    \caption{Driftfall vid parallell- och seriekopplade pumpar}
+	\begin{table}[ht]
+    \caption*{\textbf{Driftfall vid parallell- och seriekopplade pumpar}}
     \centering
     \begin{tabularx}{\linewidth}{X p{3cm} p{3cm} p{3cm}}
         \hline
@@ -80,13 +82,11 @@ $p_{0,s}$ = absoluta totaltrycket vid pumpinloppet, $p_\text{å}$ = vätskans å
     \end{tabularx}
 \end{table}
 \par
-\begin{minipage}{\textwidth}
 	\textbf{Strömningshastighet för inkompressibla medier: } 
 	\begin{equation*}
     v_m = \dfrac{\dot{V}}{A} =  \dfrac{\dot{m}}{\rho \cdot A}
 	\end{equation*}
 		där $v_m$ är fluidens medelhastighet och $A$ rörets tvärsnittsarea.\par 
-\end{minipage}
 \par
 	\textbf{Strömningsförluster: } 
 	\begin{equation*}

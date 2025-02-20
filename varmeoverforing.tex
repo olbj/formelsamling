@@ -1,6 +1,7 @@
 \chapter{Värmeöverföring}
 \section*{Beteckningar}
 \acrfull{A}\\
+\acrfull{alfad}\\
 \acrfull{d}\\
 \acrfull{d}\\
 \acrfull{frek}\\
@@ -41,6 +42,10 @@
 		U \cdot A &= \dfrac{1}{R_{tot}}
 	\end{align*}
  där $T_i$ och $T_u$ är temperaturena i väggens varma respektive kalla omgivning, långt från väggen. \par
+ \textbf{Termisk diffusivitet}
+ \begin{align*}
+&\alpha = \dfrac{\lambda}{\varrho \cdot c_p} \text{ m\textsuperscript{2}/s}
+ \end{align*}
 \section*{Konvektion}
 \textbf{Dimensionslösa tal} 
 	\begin{flalign*}
@@ -49,6 +54,7 @@
 	& d_h \text{ (hydraliska diametern )} = \dfrac{4 \cdot \textit{tvärsnittsarean}}{\textit{våt omkrets}} = \dfrac{4 \cdot A}{O} \\
 	& v_m \text{ (medelhastigheten )} = \dfrac{\dot{m}}{\varrho \cdot A} \\
 	& \textit{Prandtls tal: } Pr = \dfrac{c_p \cdot \mu}{\lambda} = \dfrac{c_p \cdot \nu \cdot \varrho}{\lambda} = \dfrac{\nu}{\alpha} \\
+	& \text{där } \alpha \text{ i uttrycket }  \frac{\nu}{\alpha} \text{ är ämnets termiska diffusivitet.}\\
 	& \textit{Nusselts tal: } Nu = \dfrac{\alpha \cdot d_h}{\lambda}
 	\end{flalign*}
 	Korrelationer för \acrfull{Nu} finns till exempel i  \cite{soleimani_mohseni_formelsamling_2018} och \cite{alvarez_energiteknik_2006}
