@@ -79,7 +79,54 @@
 	&\lambda = \dfrac{c}{f} \\
 	& c = \dfrac{c_{0}}{n} \text{ där n = index}
 \end{align*}
+\subsubsection*{Fotonenergi}
+\begin{align*}
+	& e = h \cdot v = \dfrac{h \cdot c}{\lambda}\\
+	& \text{där} \ h = \text{plancks konstant} = 6,626069 \cdot 10^{-34} J \cdot s
+\end{align*}
 \subsubsection*{Svartkroppsstrålning}
 \begin{align*}
-	E_b(T)=\sigma \cdot T^4
+	E_b(T)=\sigma \cdot T^4 \
+	\text{där } \sigma = \text{Stefan Boltzmanns konstant} = 5,67 \cdot 10^{-8} \ W/(m^2 \cdot K^4) 
+\end{align*}
+\subsubsection*{Emissivitet}
+\begin{align*}
+	\varepsilon(T)	= \dfrac{E(T)}{E_b(T)} = \dfrac{\int_{0}^\infty \varepsilon_\lambda(\lambda, T) \cdot E_{b,\lambda}(T,\lambda) \cdot d\lambda}{\sigma \cdot T^4}
+\end{align*}
+\subsubsection*{Absorptans, reflektans och transmittans}
+% 25-02-28. Symbolerna nedan är inte med i symbollistan
+\begin{align*}
+	& \text{Absorptans} = \alpha = \dfrac{\textit{absorberad strålning}}{\textit{total strålning}} \\
+	& \text{Reflektans} = \rho = \dfrac{\textit{reflekterad strålning}}{\textit{total strålning}} \\
+	& \text{Transmittans} = \tau = \dfrac{\textit{transmitterad strålning}}{\textit{total strålning}} \\
+	& \alpha = \dfrac{G_{abs}}{G} \\
+	& \rho = \dfrac{G_{ref}}{G} \\
+	& \tau = \dfrac{G_{trans}}{G} \\
+	&	\text{där} \ G = \text{totalt inkommande strålning} \ (W/m^2) \\
+	& G_{abs} + G_{ref} + G_{trans} = G \\
+	& \alpha + \rho + \tau = 1 \\
+	& \text{Opak kropp} \ \tau = 0 \rightarrow \alpha + \rho = 0 \\
+	& \text{Svart kropp:} \ \tau=0; \rho = 0; \alpha = \varepsilon = 1 \\
+	& \text{Kirchoffs lag:} \ \varepsilon(T) = \alpha(T) \\ &\text{då en yta är i termisk jämvikt och omsluten av en svart kropp}
+\end{align*}
+\subsubsection*{Vinkelfaktorer}
+\begin{align*}
+	& F_{i \rightarrow j} = \ \text{andelstrålning som lämnar yta i och träffar yta j} \\
+	& \sum\limits_{j=1}^N F_{ij} = 1 \ \text{där ytan i är helt omsluten av N ytor.} \\ 
+	& F_{11} \text{är strålning som yta i utbyter med sig själv}\\
+	\\
+	& \text{Superpositionsregeln:} \\
+	& F_{1 \rightarrow (2+3)} = F_{12} + F_{13} \\
+	& A_1  \cdot F_{1 \rightarrow (2+3)} = A_1 \cdot F_{12} + A_1 \cdot F_{13} \\
+	& (A_1 + A_2) \cdot F_{1 \rightarrow (2+3)} = A_2 \cdot F_{12} + A_3 \cdot F_{13} \\
+	\\
+	& \text{Reciprocitetslagen} \\
+	& A_1 \cdot F_{12} = A_2 \cdot F_{21}
+\end{align*}
+\subsubsection*{Värmeutbyte mellan svarta ytor:}
+\begin{align*}
+	& \dot{Q}_i = \sum\limits_{j=1}^N A_i \cdot F_{ij} \cdot \sigma \cdot \left( T_i^4 - T_j^4 \right) \\
+	%& \text{Nettovärme från yta 1 till yta 2:} \\
+	%& \dot{Q}_{1 \rightarrow 2} = A_1 \cdot \sigma \cdot T_1^4 \cdot F_{12} - A_2 \cdot \sigma \cdot T_2^4 \cdot F_{21} = \\
+	%& =  \left| A_1 \cdot F_{12} = A_2 \cdot F_{21} \Rightarrow F_{21} = \dfrac{A_1 \cdot F_{12}}{A_2} \right| = A_1 \cdot \sigma \cdot  T_2^4 \cdot F_{12} 
 \end{align*}
