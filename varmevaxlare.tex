@@ -30,11 +30,14 @@
 	\section*{NTU-metoden}
 	Temperatureffektivitet, värmeväxlareffektivtet
 	\begin{align*}
-		&\varepsilon = \dfrac{\dot{Q}}{\dot{Q}_{max}}=\dfrac{\textit{Verklig överförd värmeeffekt}}{\textit{Teoretiskt maximalt överförd värmeeffekt}}
+		&\varepsilon = \dfrac{\dot{Q}}{\dot{Q}_{max}}=
+		\dfrac{\textit{Verklig överförd värmeeffekt}}{\textit{Teoretiskt maximalt överförd värmeeffekt}} \\
+		& = \dfrac{C_v \cdot (T_{v,in} - T_{v,ut})}{C_{min} \cdot (T_{v,in} - T_{k,in})}
+		= \dfrac{C_k \cdot (T_{k,ut} - T_{k,in})}{C_{min} \cdot (T_{v,in} - T_{k,in})}
 	\end{align*}
 	\begin{align*}
-		\dot{Q}&=C_k \cdot (T_{k_ut} - T_{k_in}) \\
-		 &=C_v \cdot (T_{v_ut} - T_{v_in}) \\
+		\dot{Q}&=C_k \cdot (T_{k,ut} - T_{k,in}) \\
+		 &=C_v \cdot (T_{v,in} - T_{v,ut}) \\
 	\end{align*}
 	\vspace{-4.5em} % Adjust this value to control the spacing
 	\begin{align*}
