@@ -125,10 +125,18 @@
 \end{align*}
 \subsubsection*{Värmeutbyte mellan svarta ytor:}
 \begin{align*}
-	& \dot{Q}_i = \sum\limits_{j=1}^N A_i \cdot F_{ij} \cdot \sigma \cdot \left( T_i^4 - T_j^4 \right) \\
+	& \dot{Q}_i = \sum\limits_{j=1}^N A_i \cdot F_{ij} \cdot \sigma \cdot \left( T_i^4 - T_j^4 \right) 
 	%& \text{Nettovärme från yta 1 till yta 2:} \\
 	%& \dot{Q}_{1 \rightarrow 2} = A_1 \cdot \sigma \cdot T_1^4 \cdot F_{12} - A_2 \cdot \sigma \cdot T_2^4 \cdot F_{21} = \\
 	%& =  \left| A_1 \cdot F_{12} = A_2 \cdot F_{21} \Rightarrow F_{21} = \dfrac{A_1 \cdot F_{12}}{A_2} \right| = A_1 \cdot \sigma \cdot  T_2^4 \cdot F_{12} 
+\end{align*}
+\subsubsection*{Värmeutbyte mellan gråa ytor:}
+\begin{align*}
+&	\varepsilon_{res} = F_{12} \cdot \varepsilon_{1} \cdot \varepsilon_{2} \\
+& \text{Vid stora parallella plattor} \\
+& \varepsilon_{res} = \dfrac{1}{\dfrac{1}{\varepsilon_{1}} + \dfrac{1}{\varepsilon_{2}} -1 } \\
+& \text{Då ytan} \ A_1 \ \text{ är helt omsluten} \\
+& \varepsilon_{res} = \dfrac{1}{\dfrac{1}{\varepsilon_{1}} + \dfrac{A_1}{A_2}\left(\dfrac{1}{\varepsilon_{2}} -1 \right)}
 \end{align*}
 \subsubsection*{Sammansatt värmeöverföring:}
 \begin{align*}
