@@ -4,13 +4,12 @@
 \acrfull{A} \\
 \acrfull{cp} \\
 \acrfull{etaepsilon} \\
-\acrfull{Cprick} \\
 \acrfull{m} \\
 \acrfull{mprick} \\
 \acrfull{T} \\
 \acrfull{U} \\
 \acrfull{Q} \\
-\acrfull{Qprick} \\
+\acrfull{Qprick}
 
 \section*{Värmebalanser}
 	\begin{align*}
@@ -43,7 +42,7 @@
 	\end{align*}
 	\vspace{-4em} % Adjust this value to control the spacing
 	\begin{align*}
-	&\dot{Q}_{max}=C_{min} \cdot (T_{v_in} - T_{k_in}) \text{ där } C_{min} = \text{min} \{C_v, C_k\} \\
+	&\dot{Q}_{max}=C_{min} \cdot (T_{v,in} - T_{k,in}) \text{ där } C_{min} = \text{min} \{C_v, C_k\} \\
 	& C = \dot{m} \cdot c_p \ \text{för varma respektive kalla flödet} \\
 	& C_r = \dfrac{C_{min}}{C_{max}} \\
 	&\textit{NTU}=\dfrac{U \cdot A_s}{C_{min}} \text{ där } A_s \text{ är värmeväxlarens värmeöverförande yta.}
@@ -67,7 +66,7 @@
 		& \varepsilon = \left[ \left(\dfrac{1- \varepsilon_1 \cdot C_r}{1 - \varepsilon_1} \right)^n - 1\right] \cdot \left[ \left(\dfrac{1- \varepsilon_1 \cdot C_r}{1 - \varepsilon_1} \right)^n - C_r\right]^{-1}
 	\end{align*}
 	\subsection*{Tvärströms värmeväxlare, enkelt pass}
-	Uttrycken $exp[...]$ i sambanden nedan motsvarar $e^{[...]}$
+	Uttrycken $exp[\dots]$ i sambanden nedan motsvarar $e^{[\dots]}$
 	\subsubsection*{Båda fluiderna oblandade}
 	\begin{align*}
 		& \varepsilon = 1 - exp\left[{\dfrac{NTU^{0,22}}{C_r} \cdot \left(exp{(-C_r \cdot NTU^{0,78})} -1 \right)}\right] \\
