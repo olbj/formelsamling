@@ -3,15 +3,14 @@
 
 \acrfull{A} \\
 \acrfull{cp} \\
+\acrfull{etaepsilon} \\
+\acrfull{Cprick} \\
 \acrfull{m} \\
 \acrfull{mprick} \\
 \acrfull{T} \\
 \acrfull{U} \\
-\acrfull{etaepsilon} \\
-\acrfull{Cprick} \\
 \acrfull{Q} \\
 \acrfull{Qprick} \\
-\acrfull{Hjd}
 
 \section*{Värmebalanser}
 	\begin{align*}
@@ -28,12 +27,15 @@
     &&$\Delta T_2 = T_{v,ut} - T_{k,in}$ & $\Delta T_2 = T_{v,ut} - T_{k,ut}$ \\
 	\end{tabular}
 	\section*{NTU-metoden}
-	\subsection*{Temperatureffektivitet, värmeväxlareffektivtet}
+	\subsection*{Värmeväxlareffektivitet}
 	\begin{align*}
-		&\varepsilon = \dfrac{\dot{Q}}{\dot{Q}_{max}}=
+		\varepsilon & = \dfrac{\dot{Q}}{\dot{Q}_{max}}=
 		\dfrac{\textit{Verklig överförd värmeeffekt}}{\textit{Teoretiskt maximalt överförd värmeeffekt}} \\
 		& = \dfrac{C_v \cdot (T_{v,in} - T_{v,ut})}{C_{min} \cdot (T_{v,in} - T_{k,in})}
-		= \dfrac{C_k \cdot (T_{k,ut} - T_{k,in})}{C_{min} \cdot (T_{v,in} - T_{k,in})}
+		 = \dfrac{C_v \cdot (T_{v,in} - T_{v,ut})}{C_{min} \cdot (T_{v,in} - T_{k,in})} \\
+		& = \dfrac{C_{max} \cdot (T_{in} - T_{ut})_{min}}{C_{min} \cdot (T_{v,in} - T_{k,in})}
+		= \dfrac{C_{min} \cdot (T_{in} - T_{ut})_{max}}{C_{min} \cdot (T_{v,in} - T_{k,in})} 
+		= \dfrac{(T_{in} - T_{ut})_{max}}{(T_{v,in} - T_{k,in})}
 	\end{align*}
 	\begin{align*}
 		\dot{Q}&=C_k \cdot (T_{k,ut} - T_{k,in}) \\
