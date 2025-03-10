@@ -39,9 +39,15 @@
 		& = \dfrac{(T_i-T_u) \cdot A}{\left(\dfrac{1}{\alpha_i}+\dfrac{\delta_1}{\lambda_1}+ \dfrac{\delta_2}{\lambda_2}+\cdots +\dfrac{\delta_n}{\lambda_n}+\dfrac{1}{\alpha_u}\right)} = \\
 		 & = \dfrac{(T_i-T_u)}{\left(\dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfrac{\delta_2}{\lambda_2 \cdot A}+\cdots +\dfrac{\delta_n}{\lambda_n\cdot A} +\dfrac{1}{\alpha_u \cdot A}\right)} = \\
 		 & = \dfrac{(T_i-T_u)}{R_{tot}}\\
-		U \cdot A &= \dfrac{1}{R_{tot}}
+%		U \cdot A &= \dfrac{1}{R_{tot}} \\
+R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfrac{\delta_2}{\lambda_2 \cdot A}+\cdots +\dfrac{\delta_n}{\lambda_n\cdot A} +\dfrac{1}{\alpha_u \cdot A} = \dfrac{1}{U \cdot A} \text{ (K/W)}
 	\end{align*}
- där $T_i$ och $T_u$ är temperaturena i väggens varma respektive kalla omgivning, långt från väggen. \par
+ där $T_i$ och $T_u$ är temperaturena i väggens varma respektive kalla omgivning, långt från väggen. \\
+ Notera att värmemotståndet $R_{tot}$ även kan definieras som
+	\begin{align*}
+	& R_{tot} =  \dfrac{1}{\alpha_i}+\dfrac{\delta_1}{\lambda_1}+ \dfrac{\delta_2}{\lambda_2}+\cdots +\dfrac{\delta_n}{\lambda_n}+\dfrac{1}{\alpha_u} \text{ (K/(W$\cdot$m\textsuperscript{2}))} \\
+	& \text{I det fallet blir } \dot{Q} = \dfrac{A \cdot ( T_i - T_u )}{R_{tot}}
+	\end{align*}
  \textbf{Termisk diffusivitet}
  \begin{align*}
 &\alpha = \dfrac{\lambda}{\varrho \cdot c_p} \text{ m\textsuperscript{2}/s}
@@ -63,7 +69,7 @@
 \begin{tabularx}{\linewidth} { l l l}
 	% >{\raggedright\arraybackslash\hsize=1.9\hsize\linewidth=\hsize}X
 	% >{\raggedright\arraybackslash\hsize=0.1\hsize\linewidth=\hsize}X}
-	\textit{Laminärt flöde} & ~~~~~  & \textit{Turbulent flöde} \\ 
+	\textit{Laminärt flöde} &   & \textit{Turbulent flöde} \\ 
   $P_f \text{ } \propto \text{ } v \text{ } \propto \text{ } \dot{V}$ &&  $p_f \text{ } \propto \text{ } v^{1,75 \text{ till } 2}$\\
   $\alpha \text{ } \propto \text{ } v^{0 \text{ till } 0,3}$ &&  $\alpha \text{ } \propto \text{ } v^{0,8}$\\
 	\end{tabularx}
@@ -71,8 +77,8 @@
 \begin{tabularx}{\linewidth} {l l l} 
 	\textit{Laminärt flöde} & ~~~~~  & \textit{Turbulent flöde} \\ 
 	$p_f \text{ } \propto \text{ } d^{-4}$ && $p_f \text{ } \propto \text{ } d^{-(4,75 \text{ till } 5)}$\\
-	$\alpha \text{ } \propto \text{ } d^{-1}$ && $\alpha \text{ } \propto \text{ } d^{-1,8}$\\
-	\end{tabularx}
+		$\alpha \text{ } \propto \text{ } d^{-1}$ && $\alpha \text{ } \propto \text{ } d^{-1,8}$\\
+		\end{tabularx}
 \section*{Strålning}
 \subsubsection*{Våglängd}
 \begin{align*}
