@@ -28,7 +28,7 @@
     &&$\Delta T_2 = T_{v,ut} - T_{k,in}$ & $\Delta T_2 = T_{v,ut} - T_{k,ut}$ \\
 	\end{tabular}
 	\section*{NTU-metoden}
-	Temperatureffektivitet, värmeväxlareffektivtet
+	\subsection*{Temperatureffektivitet, värmeväxlareffektivtet}
 	\begin{align*}
 		&\varepsilon = \dfrac{\dot{Q}}{\dot{Q}_{max}}=
 		\dfrac{\textit{Verklig överförd värmeeffekt}}{\textit{Teoretiskt maximalt överförd värmeeffekt}} \\
@@ -39,9 +39,46 @@
 		\dot{Q}&=C_k \cdot (T_{k,ut} - T_{k,in}) \\
 		 &=C_v \cdot (T_{v,in} - T_{v,ut}) \\
 	\end{align*}
-	\vspace{-4.5em} % Adjust this value to control the spacing
+	\vspace{-4em} % Adjust this value to control the spacing
 	\begin{align*}
 	&\dot{Q}_{max}=C_{min} \cdot (T_{v_in} - T_{k_in}) \text{ där } C_{min} = \text{min} \{C_v, C_k\} \\
 	& C = \dot{m} \cdot c_p \ \text{för varma respektive kalla flödet} \\
+	& C_r = \dfrac{C_{min}}{C_{max}} \\
 	&\textit{NTU}=\dfrac{U \cdot A_s}{C_{min}} \text{ där } A_s \text{ är värmeväxlarens värmeöverförande yta.}
 	\end{align*}
+	\subsection*{Motströms värmeväxlare}
+	\begin{align*}
+		& \varepsilon = \frac{1 - e^{-NTU \cdot (1 - C_r)}}{1 - C_r \cdot e^{-NTU \cdot (1 - C_r)}} \text{ då } C_r<0\\
+		& \varepsilon = \dfrac{NTU}{1-NTU} \text{ då } C_r=0
+	\end{align*}
+	\subsection*{Medströms värmeväxlare}
+	\begin{align*}
+		& \varepsilon = \frac{1 - e^{-NTU \cdot (1 + C_r)}}{1 + C_r} 
+	\end{align*}
+	\subsection*{Tubvärmeväxlare}
+	\subsubsection*{1 mantelpass, 2, 4, … tubpass}
+	\begin{align*}
+		& \varepsilon_1 = 2 \cdot \left[ 1 + C_r + \sqrt{1+C_r^2} \cdot \dfrac{1+e^{(-NTU \cdot \sqrt{1+C_r^2})}}{1-e^{(-NTU \cdot \sqrt{1+C_r^2})}}\right]^{-1}
+	\end{align*}
+	\subsubsection*{n mantelpass, 2n, 4n … tubpass}
+	\begin{align*}
+		& \varepsilon = \left[ \left(\dfrac{1- \varepsilon_1 \cdot C_r}{1 - \varepsilon_1} \right)^n - 1\right] \cdot \left[ \left(\dfrac{1- \varepsilon_1 \cdot C_r}{1 - \varepsilon_1} \right)^n - C_r\right]^{-1}
+	\end{align*}
+	\subsection*{Tvärströms värmeväxlare, enkelt pass}
+	\subsubsection*{Båda fluiderna oblandade}
+	\begin{align*}
+		& \varepsilon = 1 - exp\left[{\dfrac{NTU^{0,22}}{C_r} \cdot \left(exp{(-C_r \cdot NTU^{0,78})} -1 \right)}\right]
+	\end{align*}
+	\subsubsection*{$\mathbf{C_{max}}$ blandad, $\mathbf{C_{min}}$ oblandad}
+	\begin{align*}
+	& \varepsilon = \dfrac{1}{C_r} \cdot ( 1- exp\{ -C_r \cdot [1 - exp(-NTU)]\})
+	\end{align*}
+	\subsubsection*{$\mathbf{C_{max}}$ oblandad, $\mathbf{C_{min}}$ blandad}
+	\begin{align*}
+	& \varepsilon = 1- exp\left\{ \dfrac{1}{C_r} \cdot [1 - exp(-C_r \cdot NTU)]\right\}
+	\end{align*}
+	\subsection*{Alla värmeväxlare då $\mathbf{C_r = 0}$}
+	\begin{align*}
+		\varepsilon = 1 - e^{-NTU}
+	\end{align*}
+
