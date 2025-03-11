@@ -31,10 +31,10 @@
 		\varepsilon & = \dfrac{\dot{Q}}{\dot{Q}_{max}}=
 		\dfrac{\textit{Verklig överförd värmeeffekt}}{\textit{Teoretiskt maximalt överförd värmeeffekt}} \\
 		& = \dfrac{C_v \cdot (T_{v,in} - T_{v,ut})}{C_{min} \cdot (T_{v,in} - T_{k,in})}
-		 = \dfrac{C_k \cdot (T_{k,in} - T_{k,ut})}{C_{min} \cdot (T_{v,in} - T_{k,in})} \\
-		& = \dfrac{C_{max} \cdot (T_{in} - T_{ut})_{min}}{C_{min} \cdot (T_{v,in} - T_{k,in})}
-		= \dfrac{C_{min} \cdot (T_{in} - T_{ut})_{max}}{C_{min} \cdot (T_{v,in} - T_{k,in})} 
-		= \dfrac{(T_{in} - T_{ut})_{max}}{(T_{v,in} - T_{k,in})}
+		 = \dfrac{C_k \cdot (T_{k,ut} - T_{k,in})}{C_{min} \cdot (T_{v,in} - T_{k,in})} \\
+		& = \dfrac{C_{max} \cdot (\left| T_{in} - T_{ut}\right|)_{min}}{C_{min} \cdot (T_{v,in} - T_{k,in})}
+		= \dfrac{C_{min} \cdot (\left| T_{in} - T_{ut}\right|)_{max}}{C_{min} \cdot (T_{v,in} - T_{k,in})} 
+		= \dfrac{(\left|T_{in} - T_{ut}\right|)_{max}}{(T_{v,in} - T_{k,in})}
 	\end{align*}
 	\begin{align*}
 		\dot{Q}&=C_k \cdot (T_{k,ut} - T_{k,in}) \\
@@ -42,15 +42,16 @@
 	\end{align*}
 	\vspace{-4em} % Adjust this value to control the spacing
 	\begin{align*}
-	&\dot{Q}_{max}=C_{min} \cdot (T_{v,in} - T_{k,in}) \text{ där } C_{min} = \text{min} \{C_v, C_k\} \\
-	& C = \dot{m} \cdot c_p \ \text{för varma respektive kalla flödet} \\
+	& C = \dot{m} \cdot c_p \text{ för varma respektive kalla flödet} \\
+	&\dot{Q}_{max}=C_{min} \cdot (T_{v,in} - T_{k,in}) \\
+	& \text{ där } C_{min} = \{C_v, C_k\}_{min} \ \text{dvs minsta } \dot{m} \cdot c_p \ \text{för } C_v \textit{ eller } C_k\\
 	& C_r = \dfrac{C_{min}}{C_{max}} \\
 	&\textit{NTU}=\dfrac{U \cdot A_s}{C_{min}} \text{ där } A_s \text{ är värmeväxlarens värmeöverförande yta.}
 	\end{align*}
 	\subsection*{Motströms värmeväxlare}
 	\begin{align*}
-		& \varepsilon = \frac{1 - e^{-NTU \cdot (1 - C_r)}}{1 - C_r \cdot e^{-NTU \cdot (1 - C_r)}} \text{ då } C_r<0\\
-		& \varepsilon = \dfrac{NTU}{1-NTU} \text{ då } C_r=0
+		& \varepsilon = \frac{1 - e^{-NTU \cdot (1 - C_r)}}{1 - C_r \cdot e^{-NTU \cdot (1 - C_r)}} \text{ då } C_r<1\\
+		& \varepsilon = \dfrac{NTU}{1-NTU} \text{ då } C_r=1
 	\end{align*}
 	\subsection*{Medströms värmeväxlare}
 	\begin{align*}
