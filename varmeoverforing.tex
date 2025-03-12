@@ -63,7 +63,19 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 	& \text{där } \alpha \text{ i uttrycket }  \frac{\nu}{\alpha} \text{ är ämnets termiska diffusivitet.}\\
 	& \textit{Nusselts tal: } Nu = \dfrac{\alpha \cdot d_h}{\lambda}
 	\end{flalign*}
-	Korrelationer för \acrfull{Nu} finns till exempel i  \cite{soleimani_mohseni_formelsamling_2018} och \cite{alvarez_energiteknik_2006}
+	Korrelationer för \acrfull{Nu} finns till exempel i  \cite{soleimani_mohseni_formelsamling_2018} och \cite{alvarez_energiteknik_2006}. Några generellt användbara korrelationer är:
+	\subsubsection*{Externt flöde, plan platta}
+	\begin{flalign*}
+		& \overline{Nu}_L = (0,037 \cdot {Rr_L^{4/5}}-871) \cdot Pr^{1/3}\\
+		& \text{Då: } Re_{x,c} = 5 \cdot 10^5, \ Re_L \leq 10^8 \ \text{och} \ 0,6 \leq Pr \leq 60
+	\end{flalign*}
+	\subsubsection*{Internt flöde, rör (Dittus-Boelters korrelation)}
+	\begin{flalign*}
+	& Nu_D = 0,023 \cdot Re^{4/5}_D \cdot Pr^n\\
+	& \text{Då: } 0,6 \leq Pr \leq 160, \ Re_D \geq 10^5, \dfrac{L}{d} \geq 10\\
+	& n = 0,4 \text{ då } T_s > T_m \\
+	& n = 0,3 \text{ då } T_s < T_m
+	\end{flalign*}
   \subsection*{Samband mellan tryckfall och värmeöverföringskoefficient för cirkuära rör}
 \subsubsection*{Konstanta röregenskaper, variabelt volymflöde}
 \begin{tabularx}{\linewidth} { l l l}
