@@ -6,9 +6,11 @@
 \acrfull{v}\\
 \acrfull{Qprick}\\
 \acrfull{h}\\
+\acrfull{kompressionsf}\\
+\acrfull{tryckf}\\
 \acrfull{s}\\
 \acrfull{x} \par
-\section*{Ångkraftprocessen}
+\section*{Ångkraftprocessen:}
 \subsection*{Index}
 	\begin{tabularx}{\linewidth} { l
 	>{\raggedright\arraybackslash\hsize=1.5\hsize\linewidth=\hsize}X
@@ -46,8 +48,26 @@
 	\begin{align*}
 		\dot{m}_{1,in}+\dot{m}_{2,in} = \dot{m}_{3,ut}
 	\end{align*}
+\section*{Förbränningsmotorer}
+\section*{Gasturbiner}
+\subsection*{Rekuperativ gasturbin}
+\subsubsection*{Index}
+	\textit{1}: tillstånd före kompression\\ 
+	\textit{2}: tillstånd efter kompressor\\ 
+	\textit{3}: tillstånd före turbin\\ 
+	\textit{4}: tillstånd efter turbin\\ 
+	\textit{5}: tillstånd före brännkammare\\ 
+	\textit{6}: tillstånd före rekuperator
+	\begin{align*}
+		\eta_t & = \dfrac{w}{q_{53}} = \dfrac{q_{\text{tillfört}} - q_{\text{bortfört}}}{q_{\text{brännkammare}}} \\
+		= &  \dfrac{c_p \cdot (T_3 - T_2) - c_p \cdot (T_4 - T_1)}{c_p \cdot (T_3 - T_5)} \\
+		= &  \dfrac{(T_3 - T_2) - (T_4 - T_1)}{T_3 - T_5} = \bigg| T_5 = T_4 \bigg| = \dfrac{(T_3 - T_4) - (T_2 - T_1)}{T_3 - T_4} \\
+		= & 1- \dfrac{T_2 - T_1}{T_3 - T_4} = 1 - \dfrac{T_2}{T_3} = 1 - \dfrac{T_2}{T_1} \cdot \dfrac{T_1}{T_3}\\ 
+			& 1 - \dfrac{1}{\dfrac{T_3}{T_1}} \cdot \left(\dfrac{p_2}{p_1}\right)^\frac{\kappa -1}{\kappa} \\
+			& \text{då } T_5 = T_4
+	\end{align*}
 \section*{Kylmaskiner och värmepumpar}
-\subsection*{Index}
+\subsubsection*{Index}
 	\begin{tabularx}{\linewidth} { l
 	>{\raggedright\arraybackslash\hsize=1.5\hsize\linewidth=\hsize}X
 	>{\raggedright\arraybackslash\hsize=0.5\hsize\linewidth=\hsize}X}
