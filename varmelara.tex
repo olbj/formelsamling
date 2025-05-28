@@ -2,13 +2,17 @@
 \section*{Beteckningar}
 \acrfull{Ru}\\
 \acrfull{mol}\\
+\acrfull{W}\\
+\acrfull{H}\\
 \acrfull{S}\\
 \acrfull{X}\\
 \acrfull{G}\\
+\acrfull{UE}\\
 \acrfull{cp}\\
 \acrfull{cv}\\
 \acrfull{q}\\
 \acrfull{m}\\
+\acrfull{np}\\
 \acrfull{s}\\
 \acrfull{R}\\
 \acrfull{c1}\\
@@ -64,16 +68,17 @@
 	\begin{flalign*}
     &\textbf{Isokor process: } V = konstant & \\
 		&Q = m \cdot c_v \cdot \Delta T & \\
-		&w = v \cdot \Delta p... & 
+		&w = 0 \\
+		&w_t = v \cdot \Delta p... & 
 	\end{flalign*}
 	\begin{flalign*}
     &\textbf{Isobar process: } p = konstant & \\
 		&Q = m \cdot c_p \cdot \Delta T & \\
-		&w = 0 & 
+		&w_t = 0 & 
 	\end{flalign*}
 	\begin{flalign*}
     & \textbf{Isoterm process: }  T = konstant & \\
-		& Q = W = m \cdot R \cdot T \cdot \ln \dfrac{p_1}{p_2}= & \\
+		& Q = W = W_t = m \cdot R \cdot T \cdot \ln \dfrac{p_1}{p_2}= & \\
 		& = m \cdot R \cdot T \cdot \ln \dfrac{v_2}{v_1} & \\
 		&  w = R \cdot T \cdot \ln \dfrac{p_1}{p_2}=R \cdot T \cdot \ln \dfrac{v_2}{v_1}= T \cdot (s_2 - s_1) \text{ för en ideal gas.} & 
 	\end{flalign*}  
@@ -81,6 +86,13 @@
 		&  \textbf{Adiabat och ise}  \textbf {ntrop process: } & \\ 
 		&  \Delta  Q = 0 \text{ och } \Delta s = 0 & \\
 		& q=0 & \\
-		& w_t = i_2 - i_1 
+		&   W = \dfrac{p_1 \cdot V_1 - p_2 \cdot V_2}{\kappa - 1} = m \cdot \dfrac {R \cdot (T_1 - T_2)}{\kappa - 1} = U_1 - U_2\\
+		& w_t = h_2 - h_1 = \kappa \cdot w
+	\end{flalign*}
+	\begin{flalign*}  
+		&  \textbf{Polytrop process: } p\cdot V^n = \textit{kontant}& \\ 
+		&   Q = m \cdot c_n \cdot (T_2 - T_1) \text{ där } c_n = -c_v \cdot \dfrac{{\kappa - n}}{n - 1}\\
+		&   W = \dfrac{p_1 \cdot V_1 - p_2 \cdot V_2}{n - 1} = m \cdot \dfrac {R \cdot (T_1 - T_2)}{n - 1} \\
+		&   W_t = n \cdot W
 	\end{flalign*}
   \textbf{Carnotprocess: } $ \eta_c = \dfrac{\Delta s \cdot (T_1 - T_2)}{\Delta s \cdot (T_1 - 0)}= 1 - \dfrac{T_2}{T_1}$ 

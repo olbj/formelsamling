@@ -1,15 +1,21 @@
 \chapter{Kraft- och kylprocesser}
 \section*{Beteckningar}
-\acrfull{COP}\\
-\acrfull{mprick}\\
-\acrfull{eta}\\
-\acrfull{v}\\
-\acrfull{Qprick}\\
-\acrfull{h}\\
-\acrfull{kompressionsf}\\
-\acrfull{tryckf}\\
-\acrfull{s}\\
-\acrfull{x} \par
+	\begin{tabularx}{\linewidth} { l
+	>{\raggedright\arraybackslash\hsize=1.5\hsize\linewidth=\hsize}X
+	>{\raggedright\arraybackslash\hsize=0.5\hsize\linewidth=\hsize}X}
+	\acrshort{COP} & \acrlong{COP}\\
+	\acrshort{eta} & \acrlong{eta}\\
+	\acrshort{h} & \acrlong{h}\\
+	\acrshort{mprick} & \acrlong{mprick}\\
+	\acrshort{np} & \acrlong{np}\\
+	\acrshort{Qprick} & \acrlong{Qprick}\\
+	\acrshort{kompressionsf} & \acrlong{kompressionsf}\\
+	\acrshort{tryckf} & \acrlong{tryckf}\\
+	\acrshort{s} & \acrlong{s}\\
+	\acrshort{v} & \acrlong{v}\\
+	\acrshort{w} & \acrlong{w}\\
+	\acrshort{x} & \acrlong{x}
+\end{tabularx}
 \section*{Ångkraftprocessen:}
 \subsection*{Index}
 	\begin{tabularx}{\linewidth} { l
@@ -49,8 +55,33 @@
 		\dot{m}_{1,in}+\dot{m}_{2,in} = \dot{m}_{3,ut}
 	\end{align*}
 \section*{Förbränningsmotorer}
-\section*{Gasturbiner}
-\subsection*{Rekuperativ gasturbin}
+\subsection*{Ideal Ottomotor}
+\begin{align*}
+	&r = \dfrac{V_{max}}{V_{min}} \\
+	&V_{max} = \text{Volymen då kolven är i sitt nedersta läge} \\
+	&V_{min} = \text{Volymen då kolven är i sitt översta läge} \\
+	&\eta = 1- \dfrac{1}{r^{\kappa - 1}} \text{ då } c_p = \textit{konstant}
+\end{align*}
+\subsection*{Ideal Dieselmotor}
+\begin{align*}
+	&r_c = \dfrac{V_{3}}{V_{2}} \\
+	&V_{3} = \text{Volymen då den isobara värmetillförseln är avslutad} \\
+	&V_{2} = \text{Volymen då den isobara värmetillförseln börjar}\\
+	&\text{Kompressionsförhållandet är } r = \dfrac{V_{max}}{V_{min}} \text{ där} \\
+	&V_{max} = \text{ volymen innan kompressionen och} \\
+	&V_{min} = \text{ volymen efter kompressionen} \\
+	&\eta_{Diesel} = 1 -  \dfrac{1}{r^{(\kappa - 1)}} \cdot \left[\dfrac{r_c^\kappa - 1}{\kappa \cdot (r_c -1)} \right] \text{ då } c_p = \textit{konstant}
+\end{align*}
+\subsection*{Ideala gasturbiner}
+\subsubsection*{Enkel gasturbincykel}
+\begin{align*}
+&\eta_t = \dfrac{w}{q_{23}}  = \dfrac{c_p \cdot (T_3 - T_2) - c_p\cdot (T_4 - T_1)} {c_p \cdot (T_3 - T_2)} = 1 - \dfrac{T_4 - T_1}{T_3 - T_2} \\
+&\text{där netto arbete } w = \text{ skillnad mellan tillfört och avgivet värme}\\
+&\left( \dfrac{T_2}{T_1} \right) = \left( \dfrac{p_2}{p_1} \right)^{\frac{\kappa -1 }{\kappa}} = {r_p}^{\frac{\kappa -1 }{\kappa}} \text{där } r_p = \dfrac{p_2}{p_1}\\
+& \text{Ekvationen ovan kan omforumleras till}\\
+&\eta_t = 1 - \dfrac{T_1}{T_2} = 1 - \dfrac{T_4}{T_3} = 1 - \dfrac{1}{\left( \dfrac{p_2}{p_1} \right)^{\frac{\kappa - 1}{\kappa}}}  =  1 - \dfrac{1}{r_p^{\frac{\kappa - 1}{\kappa}}} 
+\end{align*}
+\subsubsection*{Rekuperativ ideal gasturbin}
 \subsubsection*{Index}
 	\textit{1}: tillstånd före kompression\\ 
 	\textit{2}: tillstånd efter kompressor\\ 
@@ -66,6 +97,8 @@
 			& 1 - \dfrac{1}{\dfrac{T_3}{T_1}} \cdot \left(\dfrac{p_2}{p_1}\right)^\frac{\kappa -1}{\kappa} \\
 			& \text{då } T_5 = T_4
 	\end{align*}
+\subsubsection*{Verkliga processer}
+Vid beräkning av verkliga processer kan polytropexponenten användas för att beskriva verklig kompression och expansion. Det är inte självklart att alla steg har samma polytropexponent. Om olika steg har skilda polytropexponenter måste varje steg beräknas separat. 
 \section*{Kylmaskiner och värmepumpar}
 \subsubsection*{Index}
 	\begin{tabularx}{\linewidth} { l
