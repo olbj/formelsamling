@@ -5,6 +5,7 @@
 \acrfull{d}\\
 \acrfull{d}\\
 \acrfull{frek}\\
+\acrfull{grashof}\\
 \acrfull{Vv}\\
 \acrfull{c}\\
 \acrfull{c0}\\
@@ -13,6 +14,7 @@
 \acrfull{mprick}\\
 \acrfull{Nu}\\
 \acrfull{Pr}\\
+\acrfull{rayleigh}\\
 \acrfull{Re}\\
 \acrfull{Esk}\\
 \acrfull{stefboltz}\\
@@ -20,7 +22,9 @@
 \acrfull{Ov}\\
 \acrfull{T}\\
 \acrfull{delta}\\
+\acrfull{alfad}\\
 \acrfull{lambdat} \\
+\acrfull{volymutvidgningskoeff}\\
 \acrfull{Qprick}\\
 \acrfull{U}\\
 \acrfull{lambda}\\
@@ -54,7 +58,7 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 &\alpha = \dfrac{\lambda}{\varrho \cdot c_p} \text{ m\textsuperscript{2}/s}
  \end{align*}
 \section*{Konvektion}
-\textbf{Dimensionslösa tal} 
+\textbf{Dimensionslösa tal och defenitioner} 
 	\begin{flalign*}
 	& \textit{Reynolds tal: } Re  = \dfrac{v_m \cdot d_h}{\nu} = &   \\ 
 	& = \left| \mu = \dfrac{\nu}{\varrho}	\right| =\dfrac{v_m \cdot d_h \cdot \varrho}{\mu}   \\
@@ -62,10 +66,14 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 	& v_m \text{ (medelhastigheten )} = \dfrac{\dot{m}}{\varrho \cdot A} \\
 	& \textit{Prandtls tal: } Pr = \dfrac{c_p \cdot \mu}{\lambda} = \dfrac{c_p \cdot \nu \cdot \varrho}{\lambda} = \dfrac{\nu}{\alpha} \\
 	& \text{där } \alpha \text{ i uttrycket }  \frac{\nu}{\alpha} \text{ är ämnets termiska diffusivitet.}\\
-	& \textit{Nusselts tal: } Nu = \dfrac{\alpha \cdot d_h}{\lambda}
+	& \textit{Nusselts tal: } Nu = \dfrac{\alpha \cdot d_h}{\lambda}\\
+	& \textit{Grashofs tal: } Gr_L = \dfrac{g \cdot \beta \cdot (T_s - T_\infty) \cdot L_c^3}{\nu^2} \text{ där}\\
+	& \beta = \dfrac{1}{T} \text{ (volymutvidgningskoefficienten) och} \\[8pt]
+	& T = \dfrac{T_\infty +T_s}{2} \text{ (fluidens medeltemperatur)} \\
+	& \textit{Rayleighs tal: } Ra = Gr \cdot Pr
 	\end{flalign*}
-	Korrelationer för \acrfull{Nu} finns till exempel i  \cite{soleimani_mohseni_formelsamling_2018} och \cite{alvarez_energiteknik_2006}. Några generellt användbara korrelationer är:
-	\subsubsection*{Externt flöde, plan platta}
+	Korrelationer för \acrfull{Nu} finns till exempel i  \cite{soleimani_mohseni_formelsamling_2018}, \cite{alvarez_energiteknik_2006} och \cite{Incropera2007}. Några generellt användbara korrelationer är:
+	\subsubsection*{Påtvingad konvektion: Externt flöde, plan platta}
 	\begin{align*}
 		&\overline{Nu}_L = (0,037 \cdot {Rr_L^{4/5}}-871) \cdot Pr^{1/3}\\[8pt]
 		&\text{Då: } 
@@ -77,7 +85,7 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 		\end{array}
 		\right]
 	\end{align*}
-	\subsubsection*{Turbulent internt flöde, rör (Dittus-Boelter)}
+	\subsubsection*{Påtvingad konvektion: Turbulent internt flöde, rör (Dittus-Boelter)}
 	\begin{align*}
 	& Nu_D = 0,023 \cdot Re^{4/5}_D \cdot Pr^n\\[10pt]
 	& \text{Då: } 
@@ -91,7 +99,7 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 	\end{array}
 	\right]
 	\end{align*}
-	\subsubsection*{Turbulent internt flöde, rör (Gnielinski)}
+	\subsubsection*{Påtvingad konvektion: Turbulent internt flöde, rör (Gnielinski)}
 	\begin{align*}
 	&Nu_D =  \dfrac{(f/8)\,(Re - 1000)\cdot Pr}
   {1 + 12.7\,\left(\dfrac{f}{8}\right)^{1/2}\left(Pr^{2/3} - 1\right)} \\[8pt]
@@ -106,8 +114,8 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 	\\[8pt]
 	&f = \text{ friktionskoefficienten från Moodys diagram}
 	\end{align*}
-	\subsubsection*{Laminärt internt flöde, rör (Sieder och Tate)}
-	\begin{flalign*}
+	\subsubsection*{Påtvingad konvektion: Laminärt internt flöde, rör (Sieder och Tate)}
+	\begin{align*}
 		&\overline{Nu}_D = 1,86 \cdot \left( \dfrac{Re_D \cdot Pr \cdot d}{L} \right)^{1/3} \cdot \left( \dfrac{\mu_f}{\mu_s} \right)^{0,14} \\[8pt]
 		&\text{Då: } 
 	\left[
@@ -121,7 +129,23 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 		\\[8pt]
 		&\overline{Nu}_D = 3,66 \text{ om beräkningen ovan ger ett lägre värde än 3,66}.\\
 		&\text{Då är inloppszonens längd liten jämfört med rörets längd.}
-	\end{flalign*}
+	\end{align*}
+	\subsection*{Naturlig konvektion:}
+	\subsubsection*{Vertikal platta}
+	\begin{align*}
+		&Nu = 0,59 \cdot Ra^{1/4} \text{ då } 10^4 \lesssim Ra \lesssim 10^9\\
+		&Nu = 0,1 \cdot Ra^{1/3} \text{ då } 10^13 \lesssim Ra \lesssim 10^{13}\\
+		&\text{Churchill och Chus korrelation:} \\
+		&Nu = \left\{ 0.825 + \dfrac{0,387 \cdot Ra^{1/6}}{\left[1 + (0,492/Pr)^{9/16}\right]^{8/27}} \right\}^2 \ \text{över hela området} 
+	\end{align*}
+	\subsubsection*{Horisontell platta}
+	\begin{align*}
+		&\text{a) Fluiden värms av het plattas översida:} \\
+		&Nu = 0,54 \cdot Ra_L^{1/4} \text{ då } 10^4 \lesssim Ra_L \lesssim 10^7 \\
+		&Nu = 0,15 \cdot Ra_L^{1/3} \text{ då } 10^7 \lesssim Ra_L \lesssim 10^{11} \\ 
+		&\text{b) Fluiden värms av het plattas undersida} \\
+		&Nu = 0,27 \cdot Ra_L^{1/4} \text{ då } 10^5 \lesssim Ra_L \lesssim 10^{11}
+	\end{align*}
 	\needspace{4\baselineskip}
   \subsection*{Samband mellan tryckfall och värmeöverföringskoefficient för cirkuära rör}
 \subsubsection*{Konstanta röregenskaper, variabelt volymflöde}
