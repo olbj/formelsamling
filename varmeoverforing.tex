@@ -20,6 +20,7 @@
 \acrfull{Ov}\\
 \acrfull{T}\\
 \acrfull{delta}\\
+\acrfull{lambdat} \\
 \acrfull{Qprick}\\
 \acrfull{U}\\
 \acrfull{lambda}\\
@@ -45,7 +46,7 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
  där $T_i$ och $T_u$ är temperaturena i väggens varma respektive kalla omgivning, långt från väggen. \par
  Notera att värmemotståndet $R_{tot}$ även kan definieras som
 	\begin{align*}
-	& R_{tot} =  \dfrac{1}{\alpha_i}+\dfrac{\delta_1}{\lambda_1}+ \dfrac{\delta_2}{\lambda_2}+\cdots +\dfrac{\delta_n}{\lambda_n}+\dfrac{1}{\alpha_u} \text{ (K/(W$\cdot$m\textsuperscript{2}))} \\
+	& R_{tot} =  \dfrac{1}{\alpha_i}+\dfrac{\delta_1}{\lambda_1}+ \dfrac{\delta_2}{\lambda_2}+\cdots +\dfrac{\delta_n}{\lambda_n}+\dfrac{1}{\alpha_u} \text{ ((K$\cdot$m\textsuperscript{2})/W}) \\
 	& \text{I det fallet blir } \dot{Q} = \dfrac{A \cdot ( T_i - T_u )}{R_{tot}}
 	\end{align*}
  \textbf{Termisk diffusivitet}
@@ -65,17 +66,63 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 	\end{flalign*}
 	Korrelationer för \acrfull{Nu} finns till exempel i  \cite{soleimani_mohseni_formelsamling_2018} och \cite{alvarez_energiteknik_2006}. Några generellt användbara korrelationer är:
 	\subsubsection*{Externt flöde, plan platta}
+	\begin{align*}
+		&\overline{Nu}_L = (0,037 \cdot {Rr_L^{4/5}}-871) \cdot Pr^{1/3}\\[8pt]
+		&\text{Då: } 
+		\left[
+			\begin{array}{l}
+		Re_{x,c} = 5 \cdot 10^5\\ 
+		Re_L \gtrsim 10^8\\ 
+		0,6 \lesssim Pr
+		\end{array}
+		\right]
+	\end{align*}
+	\subsubsection*{Turbulent internt flöde, rör (Dittus-Boelter)}
+	\begin{align*}
+	& Nu_D = 0,023 \cdot Re^{4/5}_D \cdot Pr^n\\[10pt]
+	& \text{Då: } 
+	\left[
+	\begin{array}{l}
+	0,6 \lesssim Pr \lesssim 160 \\
+	Re_D \gtrsim 10^4 \\
+	\dfrac{L}{d} \gtrsim 10\\
+	n = 0,4 \text{ vid } T_s > T_m \\
+	n = 0,3 \text{ vid } T_s < T_m
+	\end{array}
+	\right]
+	\end{align*}
+	\subsubsection*{Turbulent internt flöde, rör (Gnielinski)}
+	\begin{align*}
+	&Nu_D =  \dfrac{(f/8)\,(Re - 1000)\cdot Pr}
+  {1 + 12.7\,\left(\dfrac{f}{8}\right)^{1/2}\left(Pr^{2/3} - 1\right)} \\[8pt]
+	&\text{Då: }
+	\left[
+		\begin{array}{l}
+	0,5 \lesssim Pr \lesssim 2000	\\
+	3000 \lesssim Re_D \lesssim 5 \cdot 10^6 \\
+	\dfrac{L}{d} \gtrsim 10
+	\end{array} 
+	\right]
+	\\[8pt]
+	&f = \text{ friktionskoefficienten från Moodys diagram}
+	\end{align*}
+	\subsubsection*{Laminärt internt flöde, rör (Sieder och Tate)}
 	\begin{flalign*}
-		& \overline{Nu}_L = (0,037 \cdot {Rr_L^{4/5}}-871) \cdot Pr^{1/3}\\
-		& \text{Då: } Re_{x,c} = 5 \cdot 10^5, \ Re_L \leq 10^8 \ \text{och} \ 0,6 \leq Pr \leq 60
+		&\overline{Nu}_D = 1,86 \cdot \left( \dfrac{Re_D \cdot Pr \cdot d}{L} \right)^{1/3} \cdot \left( \dfrac{\mu_f}{\mu_s} \right)^{0,14} \\[8pt]
+		&\text{Då: } 
+	\left[
+		\begin{array}{l}
+			T_s = \text{ konstant} \\
+			0,60 \lesssim Pr \lesssim 5\\[3pt]
+		0,0044 \lesssim \dfrac{\mu_f}{\mu_s} \lesssim 9,75 \\[8pt]
+		\overline{Nu}_D > 3,66
+		\end{array}
+	\right]
+		\\[8pt]
+		&\overline{Nu}_D = 3,66 \text{ om beräkningen ovan ger ett lägre värde än 3,66}.\\
+		&\text{Då är inloppszonens längd liten jämfört med rörets längd.}
 	\end{flalign*}
-	\subsubsection*{Internt flöde, rör (Dittus-Boelters korrelation)}
-	\begin{flalign*}
-	& Nu_D = 0,023 \cdot Re^{4/5}_D \cdot Pr^n\\
-	& \text{Då: } 0,6 \leq Pr \leq 160, \ Re_D \geq 10^5, \dfrac{L}{d} \geq 10\\
-	& n = 0,4 \text{ då } T_s > T_m \\
-	& n = 0,3 \text{ då } T_s < T_m
-	\end{flalign*}
+	\needspace{4\baselineskip}
   \subsection*{Samband mellan tryckfall och värmeöverföringskoefficient för cirkuära rör}
 \subsubsection*{Konstanta röregenskaper, variabelt volymflöde}
 \begin{tabularx}{\linewidth} { l l l}
