@@ -29,3 +29,4 @@ Arkiv/*
 *.bbl-SAVE-ERROR
 *.bcf-SAVE-ERROR
 temp.tex
+.DS_Store
