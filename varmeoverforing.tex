@@ -60,17 +60,21 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 \section*{Konvektion}
 \textbf{Dimensionslösa tal och defenitioner} 
 	\begin{flalign*}
-	& \textit{Reynolds tal: } Re  = \dfrac{v_m \cdot d_h}{\nu} = &   \\ 
-	& = \left| \mu = \dfrac{\nu}{\varrho}	\right| =\dfrac{v_m \cdot d_h \cdot \varrho}{\mu}   \\
-	& d_h \text{ (hydraliska diametern )} = \dfrac{4 \cdot \textit{tvärsnittsarean}}{\textit{våt omkrets}} = \dfrac{4 \cdot A}{O} \\
-	& v_m \text{ (medelhastigheten )} = \dfrac{\dot{m}}{\varrho \cdot A} \\
-	& \textit{Prandtls tal: } Pr = \dfrac{c_p \cdot \mu}{\lambda} = \dfrac{c_p \cdot \nu \cdot \varrho}{\lambda} = \dfrac{\nu}{\alpha} \\
-	& \text{där } \alpha \text{ i uttrycket }  \frac{\nu}{\alpha} \text{ är ämnets termiska diffusivitet.}\\
-	& \textit{Nusselts tal: } Nu = \dfrac{\alpha \cdot d_h}{\lambda}\\
-	& \textit{Grashofs tal: } Gr_L = \dfrac{g \cdot \beta \cdot (T_s - T_\infty) \cdot L_c^3}{\nu^2} \text{ där}\\
-	& \beta = \dfrac{1}{T} \text{ (volymutvidgningskoefficienten) och} \\[8pt]
-	& T = \dfrac{T_\infty +T_s}{2} \text{ (fluidens medeltemperatur)} \\
-	& \textit{Rayleighs tal: } Ra = Gr \cdot Pr
+	&\textit{Reynolds tal: } Re  = \dfrac{v_m \cdot d_h}{\nu} = &   \\ 
+	&= \left| \mu = \dfrac{\nu}{\varrho}	\right| =\dfrac{v_m \cdot d_h \cdot \varrho}{\mu}   \\
+	&d_h \text{ (hydraliska diametern )} = \dfrac{4 \cdot \textit{tvärsnittsarean}}{\textit{våt omkrets}} = \dfrac{4 \cdot A}{O} \\
+	&v_m \text{ (medelhastigheten )} = \dfrac{\dot{m}}{\varrho \cdot A} \\[4pt]
+	&\textit{Prandtls tal: } Pr = \dfrac{c_p \cdot \mu}{\lambda} = \dfrac{c_p \cdot \nu \cdot \varrho}{\lambda} = \dfrac{\nu}{\alpha} \\
+	&\text{där } \alpha \text{ i uttrycket }  \frac{\nu}{\alpha} \text{ är ämnets termiska diffusivitet.}\\[4pt]
+	&\textit{Nusselts tal: } Nu = \dfrac{\alpha \cdot L_c}{\lambda} \text{ där } L_c \text{ är en karktäristisk längd} \\ 
+	&\text{i riktningen för gränsskiktets utbredning}\\
+	& Nu_D = \dfrac{\alpha \cdot d_h}{\lambda} \text{ där } d_h = \text{ hydralisk längd (våt omkrets) vid invändig strömning}\\
+	&Nu_L = \dfrac{\alpha \cdot L}{\lambda} \text{ där } L \text{ är plattans längd vid utvändig strömning över platta}\\
+	&Nu_D = \dfrac{\alpha \cdot D}{\lambda} \text{ där } D \text{ är diametern vid utvändig strömning över cylinder eller sfär}\\[10pt]
+	&\textit{Grashofs tal: } Gr_L = \dfrac{g \cdot \beta \cdot (T_s - T_\infty) \cdot L_c^3}{\nu^2} \text{ där}\\
+	&\beta = \dfrac{1}{T} \text{ (volymutvidgningskoefficienten (} K^{-1} \text{)) och} \\[4pt]
+	&T = \dfrac{T_\infty +T_s}{2} \text{ (fluidens medeltemperatur  eller filmtemperatur (K))} \\
+	&\textit{Rayleighs tal: } Ra = Gr \cdot Pr
 	\end{flalign*}
 	Korrelationer för \acrfull{Nu} finns till exempel i  \cite{soleimani_mohseni_formelsamling_2018}, \cite{alvarez_energiteknik_2006} och \cite{Incropera2007}. Några generellt användbara korrelationer är:
 	\subsubsection*{Påtvingad konvektion: Externt flöde, plan platta}
@@ -134,7 +138,7 @@ R_{tot} &= \dfrac{1}{\alpha_i \cdot A}+\dfrac{\delta_1}{\lambda_1 \cdot A}+ \dfr
 	\subsubsection*{Vertikal platta}
 	\begin{align*}
 		&Nu = 0,59 \cdot Ra^{1/4} \text{ då } 10^4 \lesssim Ra \lesssim 10^9\\
-		&Nu = 0,1 \cdot Ra^{1/3} \text{ då } 10^10 \lesssim Ra \lesssim 10^{13}\\
+		&Nu = 0,1 \cdot Ra^{1/3} \text{ då } 10^{10} \lesssim Ra \lesssim 10^{13}\\
 		&\text{Churchill och Chus korrelation:} \\
 		&Nu = \left\{ 0.825 + \dfrac{0,387 \cdot Ra^{1/6}}{\left[1 + (0,492/Pr)^{9/16}\right]^{8/27}} \right\}^2 \ \text{över hela området} 
 	\end{align*}
